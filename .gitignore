@@ -8,6 +8,8 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
+.vscode
+dev-dist
 .DS_Store
 dist
 dist-ssr
