@@ -11,7 +11,7 @@ export default defineConfig({
     vue(),
     Pages(),
     VitePWA({
-      registerType: 'prompt',
+      registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
       manifest: {
         name: "Fajar's Portfolio",

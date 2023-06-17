@@ -33,7 +33,7 @@ const link = [
 
 const starter = [
     { style: '', span: '', title: "Portfolio", act: () => scroll('portfolio') },
-    { style: 'bg-violet-500 text-white', span: '', title: "Download CV", act: () => window.open('https://res.cloudinary.com/dxa4bdtdx/image/upload/v1686421442/resume_xgrrel.pdf', 'resume') },
+    { style: 'bg-violet-500 text-white', span: '', title: "Download CV", act: () => window.open('https://res.cloudinary.com/dxa4bdtdx/image/upload/v1686561195/resume_cp5csr.pdf', 'resume') },
     { style: 'bg-white', span: 'bg-gradient-to-br from-violet-600 to-fuchsia-500 clip', title: "Let's Talk !", act: () => scroll('contact') },
 ]
 const summary = [
@@ -67,10 +67,10 @@ const learned = [
 ]
 const port = [
     { img: 'gpp.avif', title: 'GPP System', desc: 'GITS Project Profitability (GPP) System is an application built with Vue.js and TailwindCSS to facilitate profit analysis, project costs analysis, and review employee logtime at PT. GITS Indonesia.', url: 'http://msib-gpp.gits.app/' },
-    { img: 'fim.avif', title: 'FIM UNNES', desc: 'An application built with MongoDB, Vue.js, Express.js, and Node.js and used as a medium for organizing the final round of a competition called Forum Ilmiah Matematika Nasional at Universitas Negeri Semarang.', url: 'https://fimunnes.netlify.app/' },
+    { img: 'fim.avif', title: 'FIM UNNES', desc: 'An application built with MongoDB, Vue.js, Express.js, Node.js, and TailwindCSS and used as a medium for organizing the final round of a competition called Forum Ilmiah Matematika Nasional at Universitas Negeri Semarang.', url: 'https://fimunnes.netlify.app/' },
     { img: 'unifact.avif', title: 'UniFact', desc: 'Applications built with Vue.js, FastAPI, TensorFlow, Docker, Tesseract, and TailwindCSS as projects for my bachelor thesis completion. The application is equipped with a Deep Learning model with a Bi-TCN architecture so that it can classify Indonesian-language news narratives as valid or hoax automatically.', url: 'https://unifact.me/' },
-    { img: 'uniform.avif', title: 'UniForm', desc: 'Apps built with MongoDB, Vue.js, Express.js, Node.js, Tesseract, and TailwindCSS to dynamically create and manage digital forms.', url: 'https://uniform.vercel.app/' },
-    { img: 'gpp.avif', title: "Fajar's Web App", desc: 'Portfolio apps built with Vue.js, Express.js, Node.js, and TailwindCSS with Google indexed and PWA support.', url: 'https://fajarmaulana-dev.vercel.app/' },
+    { img: 'uniform.avif', title: 'UniForm', desc: 'Apps built with MongoDB, Vue.js, Express.js, Node.js, Tesseract, and TailwindCSS to dynamically create and manage digital forms.', url: 'https://lpom.netlify.app/app/uniform' },
+    { img: 'gpp.avif', title: "Fajar's Web App", desc: 'Portfolio apps built with Vue.js and TailwindCSS with Google indexed and PWA support.', url: 'https://fajarmaulana-dev.netlify.app/' },
 ]
 
 const user_email = ref('')
@@ -252,17 +252,17 @@ const sendEmail = async () => {
                         :data-aos-delay="`${i}00`"
                         class="min-w-[18rem] overflow-hidden h-full bg-white shadow-[0_1px_8px_0] shadow-violet-500 rounded-[1.25rem] flex flex-col">
                         <div class="w-full h-[11rem] overflow-hidden cursor-zoom-in" @click="openModal(i)">
-                            <img :src="getAssets(po.img)" alt="gpp thumbnail">
+                            <img :src="getAssets(po.img)" :alt="`${po.title} Thumbnail`">
                         </div>
-                        <div class="p-4 flex flex-col h-[20rem] justify-between">
+                        <div class="p-4 flex flex-col h-[20.5rem] justify-between">
                             <div>
                                 <div class="font-bold text-xl mb-2">{{ po.title }}</div>
                                 <div class="text-slate-800 text-sm">{{ po.desc }}</div>
                             </div>
-                            <button type="button" style="transition: .4s;"
-                                class="w-full mt-4 bg-violet-500 text-white h-[2.5rem] rounded-md font-bold hover:tracking-wider active:tracking-normal">
+                            <a style="transition: .4s;" :href="po.url" target="_blank"
+                                class="w-full mt-4 grid place-items-center bg-violet-500 text-white h-[2.5rem] rounded-md font-bold hover:tracking-wider active:tracking-normal">
                                 Explore
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -356,9 +356,11 @@ const sendEmail = async () => {
             :class="modal.container ? 'block' : 'hidden'" style="transition: .1s; transition-delay: .1s;">
             <div :class="modal.box ? 'scale-100' : 'scale-0'" style="transition: .3s;"
                 class="w-full h-full bg-white rounded-md flex items-center justify-center shadow-[0_1px_16px_0] shadow-violet-400 relative overflow-hidden">
-                <img :src="getAssets(modalImg)" class="select-none max-h-[100%] max-w-[100%]" alt="zoomed image">
+                <div class="w-full h-full overflow-y-auto">
+                    <img :src="getAssets(modalImg)" class="select-none w-[100%]" alt="zoomed image" />
+                </div>
                 <div style="transition: .4s;" @click="closeModal()"
-                    class="absolute -top-8 -right-8 w-16 h-16 bg-violet-500 hover:bg-violet-600 active:bg-violet-500 text-white grid place-items-center rounded-full font-black cursor-pointer text-sm">
+                    class="fixed -top-8 -right-8 w-16 h-16 bg-violet-500 hover:bg-violet-600 active:bg-violet-500 text-white grid place-items-center rounded-full font-black cursor-pointer text-sm">
                     <span class="-translate-x-3 translate-y-3">✕</span>
                 </div>
             </div>
