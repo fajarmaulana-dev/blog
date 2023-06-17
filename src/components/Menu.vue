@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { onMounted, ref, toRefs } from 'vue';
+import { ref, toRefs } from '@vue/reactivity';
+import { onMounted } from '@vue/runtime-core';
 import { useRouter, useRoute } from 'vue-router';
 
 const props = defineProps({

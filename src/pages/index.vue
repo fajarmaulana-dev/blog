@@ -1,13 +1,14 @@
 <script setup lang="ts">
-import { onMounted, ref, reactive } from 'vue';
-import Menu from '@/components/Menu.vue'
-import SimpleText from '@/components/SimpleText.vue'
-import Spinner from '@/components/Spinner.vue'
-import Toast from '@/components/Toast.vue'
+import { ref, reactive } from '@vue/reactivity';
+import { onMounted } from '@vue/runtime-core';
+import Menu from '@/components/Menu.vue';
+import SimpleText from '@/components/SimpleText.vue';
+import Spinner from '@/components/Spinner.vue';
+import Toast from '@/components/Toast.vue';
 import { Form, Field } from 'vee-validate';
 import * as yup from 'yup';
 import AOS from "aos";
-import emailjs from 'emailjs-com'
+import emailjs from 'emailjs-com';
 
 const onScrollY = ref(window.scrollY);
 onMounted(() => {

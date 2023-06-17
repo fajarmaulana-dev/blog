@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { ref, toRefs, watch } from 'vue';
+import { ref, toRefs } from '@vue/reactivity';
+import { watch } from '@vue/runtime-core';
 
 const emit = defineEmits(['update:modelValue']);
 const props = defineProps({

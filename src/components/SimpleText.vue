@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { toRefs, computed } from 'vue';
+import { toRefs } from '@vue/reactivity';
 
 const emit = defineEmits(['update:modelValue', 'appendClick', 'onEnter']);
 const props = defineProps({
