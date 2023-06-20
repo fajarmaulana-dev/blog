@@ -11,9 +11,13 @@ import AOS from "aos";
 import emailjs from 'emailjs-com';
 
 const onScrollY = ref(window.scrollY);
+const screenWidth = ref(window.innerWidth);
 onMounted(() => {
     window.addEventListener('scroll', () => {
         onScrollY.value = window.scrollY;
+    })
+    window.addEventListener('resize', () => {
+        screenWidth.value = window.innerWidth;
     })
     AOS.init();
 })
@@ -39,7 +43,7 @@ const starter = [
 ]
 const summary = [
     { ico: 'sm:text-[3.25rem] lg:text-[2.5rem] xl:text-[3.25rem] fa-circle-check', amount: '5', title: 'Completed Project' },
-    { ico: 'sm:text-[3.15rem] lg:text-[2.45rem] xl:text-[3.15rem] fa-robot', amount: '1', title: 'AI Based Project' },
+    { ico: 'sm:text-[3.15rem] lg:text-[2.45rem] xl:text-[3.15rem] fa-robot', amount: '1', title: 'DL Based Project' },
     { ico: 'sm:text-[3rem] lg:text-[2.25rem] xl:text-[3rem] fa-code', amount: `+${new Date().getFullYear() - 2022}`, title: 'Year Experience' },
     { ico: 'sm:text-[3.25rem] lg:text-[2.5rem] xl:text-[3.25rem] fa-certificate', amount: '3', title: 'Tech Certificate' },
 ]
@@ -67,11 +71,11 @@ const learned = [
     { style: 'from-sky-900 via-sky-500 to-sky-200', text: 'text-lg text-sky-900', width: 'w-[calc(40%)]', title: 'PostgreSQL', src: 'postgresql.avif' },
 ]
 const port = [
-    { img: 'gpp.avif', title: 'GPP System', desc: 'GITS Project Profitability (GPP) System is an application built with Vue.js and TailwindCSS to facilitate profit analysis, project costs analysis, and review employee logtime at PT. GITS Indonesia.', url: 'http://msib-gpp.gits.app/' },
-    { img: 'fim.avif', title: 'FIM UNNES', desc: 'An application built with MongoDB, Vue.js, Express.js, Node.js, and TailwindCSS and used as a medium for organizing the final round of a competition called Forum Ilmiah Matematika Nasional at Universitas Negeri Semarang.', url: 'https://fimunnes.netlify.app/' },
-    { img: 'unifact.avif', title: 'UniFact', desc: 'Applications built with Vue.js, FastAPI, TensorFlow, Docker, Tesseract, and TailwindCSS as projects for my bachelor thesis completion. The application is equipped with a Deep Learning model with a Bi-TCN architecture so that it can classify Indonesian-language news narratives as valid or hoax automatically.', url: 'https://unifact.me/' },
-    { img: 'uniform.avif', title: 'UniForm', desc: 'Apps built with MongoDB, Vue.js, Express.js, Node.js, Tesseract, and TailwindCSS to dynamically create and manage digital forms.', url: 'https://lpom.netlify.app/app/uniform' },
-    { img: 'gpp.avif', title: "Fajar's Web App", desc: 'Portfolio apps built with Vue.js and TailwindCSS with Google indexed and PWA support.', url: 'https://fajarmaulana-dev.netlify.app/' },
+    { img: 'gpp.avif', title: 'GPP System', desc: 'GITS Project Profitability (GPP) System is an application built with Vue.js and TailwindCSS to facilitate profit analysis, project costs analysis, and review employee logtime at PT. GITS Indonesia.', url: 'http://msib-gpp.gits.app/', git: '' },
+    { img: 'fim.avif', title: 'FIM UNNES', desc: 'An application built with MongoDB, Vue.js, Express.js, Node.js, and TailwindCSS with Google indexed and PWA support and used as a medium for organizing the final round of a competition called Forum Ilmiah Matematika Nasional at Universitas Negeri Semarang.', url: 'https://fimunnes.netlify.app/', git: 'https://github.com/fajarmaulana-dev/finalfim' },
+    { img: 'unifact.avif', title: 'UniFact', desc: 'Applications built with Vue.js, FastAPI, TensorFlow, Docker, and TailwindCSS as a project for my bachelor thesis completion. The application is equipped with a Deep Learning model with a Bi-TCN architecture so that it can classify Indonesian-language news narratives as valid or hoax automatically.', url: 'https://unifact.netlify.app/', git: 'https://github.com/fajarmaulana-dev/unifact' },
+    { img: 'blog.avif', title: "Fajar's Web App", desc: 'Portfolio apps built with Vue.js and TailwindCSS with Google indexed and PWA support.', url: 'https://fajarmaulana-dev.netlify.app/', git: 'https://github.com/fajarmaulana-dev/blog' },
+    { img: 'uniform.avif', title: 'UniForm', desc: 'Apps built with MongoDB, Vue.js, Express.js, Node.js, Multer, Cloudinary, Google OAauth, and TailwindCSS to dynamically create and manage digital forms.', url: 'https://lpom.netlify.app/app/uniform', git: '' },
 ]
 
 const user_email = ref('')
@@ -129,7 +133,8 @@ const sendEmail = async () => {
 <template>
     <Menu :menu="link" />
     <div class="relative">
-        <section id="home" class="min-h-screen pb-[3.5rem] px-[calc(.5rem+6vw)] grid place-items-center">
+        <section id="home"
+            class="min-h-screen pt-0 xs:pt-7 lg:pt-0 pb-[3.5rem] px-[calc(.5rem+6vw)] grid place-items-center">
             <div class="w-full">
                 <div
                     class="w-full px-4 mt-[3.5rem] py-12 xs:px-8 sm:py-16 lg:py-24 bg-gradient-to-br from-violet-500 to-fuchsia-400 rounded-[2rem] text-white flex flex-col lg:flex-row justify-between gap-10">
@@ -147,7 +152,7 @@ const sendEmail = async () => {
                             <h1 class="text-center lg:text-left font-extrabold text-3xl">Junior Web Developer</h1>
                             <p class="text-center lg:text-left max-w-[25rem] lg:max-w-[100%]">
                                 with high passion to build an attractive and responsive web application.<br /></p>
-                            <p class="font-bold text-center">Learn faster with main parts.</p>
+                            <p class="font-bold text-center">Get in touch with me.</p>
                             <div class="w-full flex flex-col justify-center lg:justify-start sm:flex-row gap-3">
                                 <button type="button" v-for="start, i in starter" :key="i" style="transition: .4s;"
                                     :class="start.style" @click="start.act"
@@ -164,7 +169,7 @@ const sendEmail = async () => {
                     right-[2rem] grid grid-cols-1 xs:grid-cols-2 place-items-center lg:flex justify-center gap-4 xs:gap-6
                     sm:gap-8">
                         <div v-for="sum, i in summary" :key="i" data-aos="fade-down" data-aos-duration="500"
-                            :data-aos-delay="`${i + 4}00`"
+                            :data-aos-delay="screenWidth < 1024 ? '0' : `${i + 4}00`"
                             class="h-full w-full lg:w-[13rem] bg-white rounded-xl shadow-[0_1px_8px_0] shadow-fuchsia-400 flex justify-center items-center gap-4 px-3">
                             <i :class="sum.ico"
                                 class="bg-gradient-to-br from-violet-500 to-fuchsia-500 clip hidden sm:block fa-solid"></i>
@@ -260,10 +265,14 @@ const sendEmail = async () => {
                                 <div class="font-bold text-xl mb-2">{{ po.title }}</div>
                                 <div class="text-slate-800 text-sm">{{ po.desc }}</div>
                             </div>
-                            <a style="transition: .4s;" :href="po.url" target="_blank"
-                                class="w-full mt-4 grid place-items-center bg-violet-500 text-white h-[2.5rem] rounded-md font-bold hover:tracking-wider active:tracking-normal">
-                                Explore
-                            </a>
+                            <div class="flex gap-2 mt-4">
+                                <a v-if="po.git.length > 0" style="transition: .4s;" :href="po.git" target="_blank"
+                                    class="fa-brands fa-github grid place-items-center bg-slate-700 text-white text-xl min-w-[2.5rem] h-[2.5rem] rounded-md hover:bg-slate-800 active:bg-slate-700"></a>
+                                <a style="transition: .4s;" :href="po.url" target="_blank"
+                                    class="w-full grid place-items-center bg-violet-500 text-white h-[2.5rem] rounded-md font-bold hover:tracking-wider active:tracking-normal">
+                                    View Project
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -274,10 +283,11 @@ const sendEmail = async () => {
                 <div class="bg-violet-500 text-white p-4 xs:p-8 sm:p-12 w-full lg:w-[30rem] grid place-items-center">
                     <div>
                         <h2 class="font-black text-xl xs:text-3xl mb-5 xs:mb-8 text-center" data-aos="fade-right"
-                            data-aos-duration="400" data-aos-delay="400">Let's talk about everything!
+                            data-aos-duration="400" :data-aos-delay="screenWidth < 1024 ? '0' : '400'">Let's talk about
+                            everything!
                         </h2>
                         <div class="flex gap-10 xs:gap-12 flex-col sm:flex-row justify-center" data-aos="fade-right"
-                            data-aos-duration="400" data-aos-delay="500">
+                            data-aos-duration="400" :data-aos-delay="screenWidth < 1024 ? '0' : '500'">
                             <div class="flex flex-col items-center gap-2">
                                 <p class="font-bold flex items-center">
                                     <i class="fa-brands fa-whatsapp mr-2 xs:mr-3 text-xl xs:text-2xl"></i>
@@ -309,7 +319,8 @@ const sendEmail = async () => {
                             </div>
                         </div>
                         <p class="hidden sm:block text-base md:text-xl mt-10 text-center" data-aos="fade-right"
-                            data-aos-duration="400" data-aos-delay="600">Hate forms? Email me to
+                            data-aos-duration="400" :data-aos-delay="screenWidth < 1024 ? '0' : '600'">Hate forms? Email me
+                            to
                             <u><strong>
                                     <a href="mailto:fajarmaulana.dev@gmail.com">fajarmaulana.dev@gmail.com</a>
                                 </strong></u> instead.
@@ -327,12 +338,12 @@ const sendEmail = async () => {
                         <Field v-slot="{ field, errorMessage }" name="user_email">
                             <SimpleText placeholder="Email" id="user_email" width="w-[8.2rem]" type="text"
                                 v-model="user_email" v-bind="field" />
-                            <p class="text-left text-rose-600 text-xs  mb-5">{{ errorMessage }}</p>
+                            <p class="text-left text-rose-600 text-xs mb-5">{{ errorMessage }}</p>
                         </Field>
                         <Field v-slot="{ field, errorMessage }" name="message">
                             <SimpleText is="area" placeholder="Message" id="message" width="w-[8.2rem]" type="text"
                                 v-model="message" v-bind="field" />
-                            <p class="text-left text-rose-600 text-xs  mb-5">{{ errorMessage }}</p>
+                            <p class="text-left text-rose-600 text-xs mb-5">{{ errorMessage }}</p>
                         </Field>
                         <button type="button" :disabled="!(meta.valid && meta.dirty) || loading"
                             style="transition: letter-spacing .4s;"
@@ -353,15 +364,16 @@ const sendEmail = async () => {
                 </div>
             </div>
         </section>
-        <section class="fixed z-[2] h-screen w-screen bg-[#a78bfa49] top-0 left-0 p-[calc(.5rem+4vw)]"
+        <section @click="closeModal()" class="fixed z-[2] h-screen w-screen bg-[#a78bfa49] top-0 left-0 p-[calc(.5rem+4vw)]"
             :class="modal.container ? 'block' : 'hidden'" style="transition: .1s; transition-delay: .1s;">
             <div :class="modal.box ? 'scale-100' : 'scale-0'" style="transition: .3s;"
-                class="w-full h-full bg-white rounded-md flex items-center justify-center shadow-[0_1px_16px_0] shadow-violet-400 relative overflow-hidden">
+                class="w-full h-full transform-gpu bg-white rounded-md flex items-center justify-center shadow-[0_1px_16px_0] shadow-violet-400 relative overflow-hidden">
                 <div class="w-full h-full overflow-y-auto">
-                    <img :src="getAssets(modalImg)" class="select-none w-[100%]" alt="zoomed image" />
+                    <img fetchpriority="high" rel="preload" :src="getAssets(modalImg)" class="select-none w-[100%]"
+                        alt="zoomed image" />
                 </div>
                 <div style="transition: .4s;" @click="closeModal()"
-                    class="fixed -top-8 -right-8 w-16 h-16 bg-violet-500 hover:bg-violet-600 active:bg-violet-500 text-white grid place-items-center rounded-full font-black cursor-pointer text-sm">
+                    class="fixed select-none -top-8 -right-8 w-16 h-16 bg-violet-500 hover:bg-violet-600 active:bg-violet-500 text-white grid place-items-center rounded-full font-black cursor-pointer text-sm">
                     <span class="-translate-x-3 translate-y-3">✕</span>
                 </div>
             </div>
