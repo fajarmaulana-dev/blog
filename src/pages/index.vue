@@ -287,11 +287,11 @@ const sendEmail = async () => {
                 <div class="bg-violet-500 text-white p-4 xs:p-8 sm:p-12 w-full lg:w-[30rem] grid place-items-center">
                     <div>
                         <h2 class="font-black text-xl xs:text-3xl mb-5 xs:mb-8 text-center" data-aos="fade-right"
-                            data-aos-duration="400" :data-aos-delay="screenWidth < 1024 ? '0' : '400'">Let's talk about
+                            data-aos-duration="400" :data-aos-delay="screenWidth < 1024 ? '50' : '400'">Let's talk about
                             everything!
                         </h2>
                         <div class="flex gap-10 xs:gap-12 flex-col sm:flex-row justify-center" data-aos="fade-right"
-                            data-aos-duration="400" :data-aos-delay="screenWidth < 1024 ? '0' : '500'">
+                            data-aos-duration="400" :data-aos-delay="screenWidth < 1024 ? '50' : '500'">
                             <div class="flex flex-col items-center gap-2">
                                 <p class="font-bold flex items-center">
                                     <i class="fa-brands fa-whatsapp mr-2 xs:mr-3 text-xl xs:text-2xl"></i>
@@ -323,7 +323,7 @@ const sendEmail = async () => {
                             </div>
                         </div>
                         <p class="hidden sm:block text-base md:text-xl mt-10 text-center" data-aos="fade-right"
-                            data-aos-duration="400" :data-aos-delay="screenWidth < 1024 ? '0' : '600'">Hate forms? Email me
+                            data-aos-duration="400" :data-aos-delay="screenWidth < 1024 ? '50' : '600'">Hate forms? Email me
                             to
                             <u><strong>
                                     <a href="mailto:fajarmaulana.dev@gmail.com">fajarmaulana.dev@gmail.com</a>
