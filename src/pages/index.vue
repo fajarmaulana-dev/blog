@@ -332,8 +332,8 @@ const sendEmail = async () => {
                     </div>
                 </div>
                 <div class="bg-fuchsia-100 p-4 xs:p-8 sm:p-12 w-full grid place-items-center">
-                    <Form class="w-full" id="form" :validation-schema="schema" v-slot="{ meta }" data-aos="fade-down"
-                        data-aos-duration="700">
+                    <Form class="w-full" id="form" :validation-schema="schema" v-slot="{ meta }"
+                        :data-aos="screenWidth < 768 ? 'none' : 'fade-down'" data-aos-duration="700">
                         <Field v-slot="{ field, errorMessage }" name="user_name">
                             <SimpleText placeholder="Full Name" id="user_name" width="w-[8.2rem]" type="text"
                                 v-model="user_name" v-bind="field" />
