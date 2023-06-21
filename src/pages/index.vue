@@ -88,7 +88,7 @@ const schema = yup.object({
     message: yup.string().required('message is required'),
 })
 
-const sosmed = [
+const socials = [
     { ico: 'github', url: 'https://github.com/fajarmaulana-dev' },
     { ico: 'linkedin-in', url: 'https://www.linkedin.com/in/fajar-maulana-16b98b152' },
     { ico: 'whatsapp', url: 'https://wa.me/6285842039127' },
@@ -152,7 +152,16 @@ const sendEmail = async () => {
                             <h1 class="text-center lg:text-left font-extrabold text-3xl">Junior Web Developer</h1>
                             <p class="text-center lg:text-left max-w-[25rem] lg:max-w-[100%]">
                                 with high passion to build an attractive and responsive web application.<br /></p>
-                            <p class="font-bold text-center">Get in touch with me.</p>
+                            <div class="flex flex-col lg:flex-row items-center gap-4">
+                                <p class="font-bold text-center">
+                                    Get in touch with me{{ screenWidth < 1024 ? '.' : ':' }}</p>
+                                        <div class="flex gap-4 lg:gap-3 items-center">
+                                            <a v-for="social, i in socials" :key="i" style="transition: .4s;"
+                                                :href="social.url" target="_blank"
+                                                :aria-label="`Go to my ${social.ico} account`"
+                                                :class="`fa-brands fa-${social.ico} text-fuchsia-100 hover:text-white text-lg lg:text-base`"></a>
+                                        </div>
+                            </div>
                             <div class="w-full flex flex-col justify-center lg:justify-start sm:flex-row gap-3">
                                 <button type="button" v-for="start, i in starter" :key="i" style="transition: .4s;"
                                     :class="start.style" @click="start.act"
@@ -389,7 +398,7 @@ const sendEmail = async () => {
                 <img src="@/assets/fdev.avif" alt="logo" class="logo">
             </div>
             <div class="flex justify-center gap-6">
-                <a style="transition: .4s;" v-for="social, i in sosmed" :key="i" :href="social.url"
+                <a style="transition: .4s;" v-for="social, i in socials" :key="i" :href="social.url"
                     :aria-label="`Go to my ${social.ico} account`" target="_blank"
                     :class="`fa-brands fa-${social.ico} text-2xl cursor-pointer hover:text-white`">
                 </a>
