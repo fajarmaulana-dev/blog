@@ -381,7 +381,7 @@ const sendEmail = async () => {
             :class="modal.container ? 'block' : 'hidden'" style="transition: .1s; transition-delay: .1s;">
             <div :class="modal.box ? 'scale-100' : 'scale-0'" style="transition: .3s;"
                 class="w-full h-full transform-gpu bg-white rounded-md flex items-center justify-center shadow-[0_1px_16px_0] shadow-violet-400 relative overflow-hidden">
-                <div class="w-full h-full overflow-y-auto">
+                <div class="w-full h-full grid place-items-center overflow-y-auto">
                     <img fetchpriority="high" rel="preload" :src="getAssets(modalImg)" class="select-none w-[100%]"
                         alt="zoomed image" />
                 </div>
