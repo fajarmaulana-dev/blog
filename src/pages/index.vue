@@ -404,7 +404,7 @@ const sendEmail = async () => {
                 </a>
             </div>
         </div>
-        <p class="font-bold text-xs xs:text-sm text-white">Crafted with ❤️ by Fajar Maulana ©{{ new Date().getFullYear() }}
+        <p class="font-bold text-xs xs:text-sm text-white">Crafted by Fajar Maulana ©{{ new Date().getFullYear() }}
         </p>
     </div>
     <Toast is="success" v-model="toast.success" :title="text" />
