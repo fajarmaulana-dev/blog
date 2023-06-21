@@ -68,7 +68,7 @@ const learned = [
     { style: 'from-emerald-900 via-emerald-500 to-emerald-200', text: 'text-emerald-900', width: 'w-[calc(35%)]', title: 'Nuxt.js', src: 'nuxt.svg' },
     { style: 'from-sky-600 via-sky-400 to-sky-200', text: 'text-sky-600', width: 'w-[calc(35%)]', title: 'React.js', src: 'react.avif' },
     { style: 'from-blue-600 via-blue-400 to-blue-200', text: 'text-blue-600', width: 'w-[calc(40%)]', title: 'React Native', src: 'native.avif' },
-    { style: 'from-sky-900 via-sky-500 to-sky-200', text: 'text-lg text-sky-900', width: 'w-[calc(40%)]', title: 'PostgreSQL', src: 'postgresql.avif' },
+    { style: 'from-sky-900 via-sky-500 to-sky-200', text: 'text-sky-900', width: 'w-[calc(40%)]', title: 'PostgreSQL', src: 'postgresql.avif' },
 ]
 const port = [
     { img: 'gpp.avif', title: 'GPP System', desc: 'GITS Project Profitability (GPP) System is an application built with Vue.js and TailwindCSS to facilitate profit analysis, project costs analysis, and review employee logtime at PT. GITS Indonesia.', url: 'http://msib-gpp.gits.app/', git: '' },
@@ -134,7 +134,7 @@ const sendEmail = async () => {
     <Menu :menu="link" />
     <div class="relative">
         <section id="home"
-            class="min-h-screen pt-0 xs:pt-7 lg:pt-0 pb-[3.5rem] px-[calc(.5rem+6vw)] grid place-items-center">
+            class="min-h-screen pt-0 sm:pt-4 lg:pt-0 pb-[3.5rem] px-[calc(.35rem+3.5vw)] xs:px-[calc(.5rem+6vw)] grid place-items-center">
             <div class="w-full">
                 <div
                     class="w-full px-4 mt-[3.5rem] py-12 xs:px-8 sm:py-16 lg:py-24 bg-gradient-to-br from-violet-500 to-fuchsia-400 rounded-[2rem] text-white flex flex-col lg:flex-row justify-between gap-10">
@@ -142,7 +142,7 @@ const sendEmail = async () => {
                         <div class="flex items-center justify-center">
                             <div
                                 class="w-[10rem] md:w-[14rem] h-[10rem] md:h-[14rem] grid place-items-center bg-white rounded-full">
-                                <img fetchpriority="high" src="@/assets/propict.avif" alt="profile image" />
+                                <img fetchpriority="high" rel="preload" src="@/assets/propict.avif" alt="profile image" />
                             </div>
                         </div>
                     </div>
@@ -163,13 +163,13 @@ const sendEmail = async () => {
                         </div>
                     </div>
                 </div>
-                <div class="relative mt-7 lg:mb-6 border-[3px] lg:border-0 rounded-2xl border-fuchsia-400 p-4 xs:p-6 lg:p-0 lg:mt-0"
-                    data-aos="fade-up" data-aos-duration="100">
+                <div
+                    class="relative mt-7 lg:mb-6 border-[3px] lg:border-0 rounded-2xl border-fuchsia-400 p-4 xs:p-6 lg:p-0 lg:mt-0">
                     <div class=" h-[22.5rem] xs:h-52 lg:h-20 w-full lg:w-[calc(100%-4rem)] lg:absolute -bottom-10
                     right-[2rem] grid grid-cols-1 xs:grid-cols-2 place-items-center lg:flex justify-center gap-4 xs:gap-6
                     sm:gap-8">
-                        <div v-for="sum, i in summary" :key="i" data-aos="fade-down" data-aos-duration="500"
-                            :data-aos-delay="screenWidth < 1024 ? '0' : `${i + 4}00`"
+                        <div v-for="sum, i in summary" :key="i" :data-aos="screenWidth < 1024 ? 'none' : 'fade-down'"
+                            data-aos-duration="500" :data-aos-delay="`${i + 4}00`"
                             class="h-full w-full lg:w-[13rem] bg-white rounded-xl shadow-[0_1px_8px_0] shadow-fuchsia-400 flex justify-center items-center gap-4 px-3">
                             <i :class="sum.ico"
                                 class="bg-gradient-to-br from-violet-500 to-fuchsia-500 clip hidden sm:block fa-solid"></i>
@@ -214,17 +214,18 @@ const sendEmail = async () => {
                 <h2 class="text-center font-bold text-3xl mb-8" data-aos="fade-left" data-aos-duration="500">Skills</h2>
                 <p class="text-center font-bold text-lg mb-4" data-aos="fade-left" data-aos-duration="500">
                     Here are some tools I've used</p>
-                <div class="mb-6 flex justify-center flex-wrap gap-x-10 gap-y-6" data-aos="fade-right"
+                <div class="mb-6 flex justify-center flex-wrap gap-x-6 gap-y-4 xs:gap-x-10 xs:gap-y-6" data-aos="fade-right"
                     data-aos-duration="500">
                     <div v-for="use, i in skillUsed" :key="i">
-                        <div :class="use.style" class="relative w-[9rem] h-[4.5rem] bg-gradient-to-t rounded-t-full">
+                        <div :class="use.style"
+                            class="relative w-[6rem] h-[3.25rem] xs:w-[8.35rem] xs:h-[4.15rem] bg-gradient-to-t rounded-t-full">
                             <div
-                                class="absolute w-[8.5rem] h-[4.25rem] bg-white top-[0.3rem] left-1 rounded-t-full grid place-items-center">
+                                class="absolute w-[5.5rem] h-[3.1rem] xs:w-[7.85rem] xs:h-[3.875rem] bg-white top-[0.3rem] left-1 rounded-t-full grid place-items-center">
                                 <img :src="getAssets(use.src)" :class="use.width" class="translate-y-1"
                                     :alt="`${use.title} Icon`">
                             </div>
                         </div>
-                        <p class="text-center font-black text-lg" :class="use.text">{{ use.title }}</p>
+                        <p class="text-center font-black text-[.8rem] xs:text-lg" :class="use.text">{{ use.title }}</p>
                     </div>
                 </div>
                 <div class="w-full h-[calc(1rem+1vw)] flex justify-center gap-[calc(.5rem+.5vw)] my-8" data-aos="fade-left"
@@ -234,16 +235,18 @@ const sendEmail = async () => {
                 </div>
                 <p class="text-center font-bold text-lg mb-4" data-aos="fade-left" data-aos-duration="500">
                     And here are some tools I'm currently learning</p>
-                <div class="flex justify-center flex-wrap gap-x-10 gap-y-6" data-aos="fade-right" data-aos-duration="500">
+                <div class="flex justify-center flex-wrap gap-x-6 gap-y-4 xs:gap-x-10 xs:gap-y-6" data-aos="fade-right"
+                    data-aos-duration="500">
                     <div v-for="use, i in learned" :key="i">
-                        <div :class="use.style" class="relative w-[9rem] h-[4.5rem] bg-gradient-to-t rounded-t-full">
+                        <div :class="use.style"
+                            class="relative w-[6rem] h-[3.25rem] xs:w-[8.35rem] xs:h-[4.15rem] bg-gradient-to-t rounded-t-full">
                             <div
-                                class="absolute w-[8.5rem] h-[4.25rem] bg-white top-[0.3rem] left-1 rounded-t-full grid place-items-center">
+                                class="absolute w-[5.5rem] h-[3.1rem] xs:w-[7.85rem] xs:h-[3.875rem] bg-white top-[0.3rem] left-1 rounded-t-full grid place-items-center">
                                 <img :src="getAssets(use.src)" :class="use.width" class="translate-y-1"
                                     :alt="`${use.title} Icon`">
                             </div>
                         </div>
-                        <p class="text-center font-black text-lg" :class="use.text">{{ use.title }}</p>
+                        <p class="text-center font-black text-[.8rem] xs:text-lg" :class="use.text">{{ use.title }}</p>
                     </div>
                 </div>
             </div>
