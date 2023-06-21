@@ -134,7 +134,7 @@ const sendEmail = async () => {
     <Menu :menu="link" />
     <div class="relative">
         <section id="home"
-            class="min-h-screen pt-0 sm:pt-4 lg:pt-0 pb-[3.5rem] px-[calc(.35rem+3.5vw)] xs:px-[calc(.5rem+6vw)] grid place-items-center">
+            class="min-h-screen pt-0 sm:pt-[1vw] lg:pt-0 pb-[3.5rem] px-[calc(.35rem+3.5vw)] xs:px-[calc(.5rem+6vw)] grid place-items-center">
             <div class="w-full">
                 <div
                     class="w-full px-4 mt-[3.5rem] py-12 xs:px-8 sm:py-16 lg:py-24 bg-gradient-to-br from-violet-500 to-fuchsia-400 rounded-[2rem] text-white flex flex-col lg:flex-row justify-between gap-10">
