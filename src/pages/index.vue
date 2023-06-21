@@ -258,7 +258,8 @@ const sendEmail = async () => {
                         :data-aos-delay="`${i}00`"
                         class="min-w-[18rem] overflow-hidden h-full bg-white shadow-[0_1px_8px_0] shadow-violet-500 rounded-[1.25rem] flex flex-col">
                         <div class="w-full h-[11rem] overflow-hidden cursor-zoom-in" @click="openModal(i)">
-                            <img :src="getAssets(po.img)" :alt="`${po.title} Thumbnail`">
+                            <img fetchpriority="high" rel="preload" :src="getAssets(po.img)" width="288"
+                                :alt="`${po.title} Thumbnail`">
                         </div>
                         <div class="p-4 flex flex-col h-[20.5rem] justify-between">
                             <div>
