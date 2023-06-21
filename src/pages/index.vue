@@ -185,8 +185,8 @@ const sendEmail = async () => {
                             <div class="bg-gradient-to-br from-violet-500 to-fuchsia-500 clip">
                                 <p class="text-4xl font-bold text-center flex items-center justify-center gap-3">
                                     {{ sum.amount }} <a v-if="i === 3" title="download certificate"
-                                        href="https://res.cloudinary.com/dxa4bdtdx/image/upload/v1686421443/certificate_lmdedd.pdf"
-                                        target="_blank" class="fa-solid fa-download text-[1.2rem] cursor-pointer"></a>
+                                        :href="getAssets('certificate.pdf')" target="_blank"
+                                        class="fa-solid fa-download text-[1.2rem] cursor-pointer"></a>
                                 </p>
                                 <p class="text-xs text-center font-bold">{{ sum.title }}</p>
                             </div>
