@@ -12,6 +12,13 @@ export default defineConfig({
     Pages(),
     VitePWA({
       registerType: 'autoUpdate',
+      injectRegister: 'auto',
+      workbox: {
+        cleanupOutdatedCaches: false,
+        globPatterns: [
+          '**/*.{js,ts,css,html,ico,png,svg,json,vue,txt,woff2,avif}',
+        ],
+      },
       includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
       manifest: {
         name: "Fajar's Portfolio",
