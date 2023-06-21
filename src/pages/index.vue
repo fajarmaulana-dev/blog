@@ -38,7 +38,7 @@ const link = [
 
 const starter = [
     { style: '', span: '', title: "Portfolio", act: () => scroll('portfolio') },
-    { style: 'bg-violet-500 text-white', span: '', title: "Download CV", act: () => window.open('https://res.cloudinary.com/dxa4bdtdx/image/upload/v1686561195/resume_cp5csr.pdf', 'resume') },
+    { style: 'bg-violet-500 text-white', span: '', title: "Download CV", act: () => window.open(getAssets('resume.pdf'), 'resume') },
     { style: 'bg-white', span: 'bg-gradient-to-br from-violet-600 to-fuchsia-500 clip', title: "Let's Talk !", act: () => scroll('contact') },
 ]
 const summary = [
