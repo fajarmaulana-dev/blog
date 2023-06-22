@@ -73,7 +73,7 @@ const learned = [
 const port = [
     { img: 'gpp.avif', title: 'GPP System', desc: 'GITS Project Profitability (GPP) System is an application built with Vue.js and TailwindCSS to facilitate profit analysis, project costs analysis, and review employee logtime at PT. GITS Indonesia.', url: 'http://msib-gpp.gits.app/', git: '' },
     { img: 'fim.avif', title: 'FIM UNNES', desc: 'An application built with MongoDB, Vue.js, Express.js, Node.js, and TailwindCSS with Google indexed and PWA support and used as a medium for organizing the final round of a competition called Forum Ilmiah Matematika Nasional at Universitas Negeri Semarang.', url: 'https://fimunnes.netlify.app/', git: 'https://github.com/fajarmaulana-dev/finalfim' },
-    { img: 'unifact.avif', title: 'UniFact', desc: 'Applications built with Vue.js, FastAPI, TensorFlow, Docker, and TailwindCSS as a project for my bachelor thesis completion. The application is equipped with a Deep Learning model with a Bi-TCN architecture so that it can classify Indonesian-language news narratives as valid or hoax automatically.', url: 'https://unifact.netlify.app/', git: 'https://github.com/fajarmaulana-dev/unifact' },
+    { img: 'unifact.avif', title: 'UniFact', desc: 'Applications built with Vue.js, FastAPI, TensorFlow, Docker, and TailwindCSS as a project for my bachelor thesis completion. The application is equipped with a Bi-TCN architectural model, so that it can classify Indonesian-language news narratives as valid or hoax.', url: 'https://unifact.netlify.app/', git: 'https://github.com/fajarmaulana-dev/unifact' },
     { img: 'blog.avif', title: "Fajar's Web App", desc: 'Portfolio apps built with Vue.js and TailwindCSS with Google indexed and PWA support.', url: 'https://fajarmaulana-dev.netlify.app/', git: 'https://github.com/fajarmaulana-dev/blog' },
     { img: 'uniform.avif', title: 'UniForm', desc: 'Apps built with MongoDB, Vue.js, Express.js, Node.js, Multer, Cloudinary, Google OAauth, and TailwindCSS to dynamically create and manage digital forms.', url: 'https://lpom.netlify.app/app/uniform', git: '' },
 ]
@@ -152,14 +152,14 @@ const sendEmail = async () => {
                             <h1 class="text-center lg:text-left font-extrabold text-3xl">Junior Web Developer</h1>
                             <p class="text-center lg:text-left max-w-[25rem] lg:max-w-[100%]">
                                 with high passion to build an attractive and responsive web application.<br /></p>
-                            <div class="flex flex-col lg:flex-row items-center gap-4">
+                            <div class="flex flex-col sm:flex-row items-center gap-4">
                                 <p class="font-bold text-center">
-                                    Get in touch with me{{ screenWidth < 1024 ? '.' : ':' }}</p>
-                                        <div class="flex gap-4 lg:gap-3 items-center">
+                                    Get in touch with me{{ screenWidth < 640 ? '.' : ':' }}</p>
+                                        <div class="flex gap-4 sm:gap-3 items-center">
                                             <a v-for="social, i in socials" :key="i" style="transition: .4s;"
                                                 :href="social.url" target="_blank"
                                                 :aria-label="`Go to my ${social.ico} account`"
-                                                :class="`fa-brands fa-${social.ico} text-fuchsia-100 hover:text-white text-lg lg:text-base`"></a>
+                                                :class="`fa-brands fa-${social.ico} text-fuchsia-100 hover:text-white text-lg sm:text-base`"></a>
                                         </div>
                             </div>
                             <div class="w-full flex flex-col justify-center lg:justify-start sm:flex-row gap-3">
@@ -273,12 +273,12 @@ const sendEmail = async () => {
                             <img fetchpriority="high" rel="preload" :src="getAssets(po.img)" width="288"
                                 :alt="`${po.title} Thumbnail`">
                         </div>
-                        <div class="p-4 flex flex-col h-[20.5rem] justify-between">
+                        <div class="p-4 flex flex-col h-[17.75rem] justify-between">
                             <div>
                                 <div class="font-bold text-xl mb-2">{{ po.title }}</div>
                                 <div class="text-slate-800 text-sm">{{ po.desc }}</div>
                             </div>
-                            <div class="flex gap-2 mt-4">
+                            <div class="flex gap-2 mt-4 select-none">
                                 <a v-if="po.git.length > 0" style="transition: .4s;" :href="po.git" target="_blank"
                                     class="fa-brands fa-github grid place-items-center bg-slate-700 text-white text-xl min-w-[2.5rem] h-[2.5rem] rounded-md hover:bg-slate-800 active:bg-slate-700"></a>
                                 <a style="transition: .4s;" :href="po.url" target="_blank"
@@ -397,14 +397,15 @@ const sendEmail = async () => {
             <div class="w-[2.75rem] h-[2.75rem] grid place-items-center">
                 <img src="@/assets/fdev.avif" alt="logo" class="logo">
             </div>
-            <div class="flex justify-center gap-6">
+            <div class="flex justify-center gap-3 xs:gap-5">
                 <a style="transition: .4s;" v-for="social, i in socials" :key="i" :href="social.url"
                     :aria-label="`Go to my ${social.ico} account`" target="_blank"
-                    :class="`fa-brands fa-${social.ico} text-2xl cursor-pointer hover:text-white`">
+                    :class="`fa-brands fa-${social.ico} text-xl xs:text-2xl cursor-pointer hover:text-white`">
                 </a>
             </div>
         </div>
-        <p class="font-bold text-xs xs:text-sm text-white">Crafted by Fajar Maulana&emsp;© {{ new Date().getFullYear() }}
+        <p class="font-bold text-xs xs:text-sm text-white">Crafted by&emsp;Fajar Maulana&emsp;© {{ new
+            Date().getFullYear() }}
         </p>
     </div>
     <Toast is="success" v-model="toast.success" :title="text" />
