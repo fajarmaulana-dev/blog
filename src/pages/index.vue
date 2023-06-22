@@ -28,8 +28,8 @@ const getAssets = (path: string) => {
 }
 
 const link = [
-    { name: 'Home', act: () => scroll('home') },
     { name: 'Blog', act: () => false },
+    { name: 'Home', act: () => scroll('home') },
     { name: 'About', act: () => scroll('about') },
     { name: 'Skills', act: () => scroll('skills') },
     { name: 'Portfolio', act: () => scroll('portfolio') },
