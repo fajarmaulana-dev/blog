@@ -137,7 +137,7 @@ const sendEmail = async () => {
             class="min-h-screen pt-0 sm:pt-[1vw] lg:pt-0 pb-[3.5rem] px-[calc(.35rem+3.5vw)] xs:px-[calc(.5rem+6vw)] grid place-items-center">
             <div class="w-full">
                 <div
-                    class="w-full px-4 mt-[3.5rem] py-12 xs:px-8 sm:py-16 lg:py-24 bg-gradient-to-br from-violet-500 to-fuchsia-400 rounded-[2rem] text-white flex flex-col lg:flex-row justify-between gap-10">
+                    class="w-full px-4 mt-[3.5rem] py-6 xs:py-10 xs:px-8 sm:py-12 lg:py-24 bg-gradient-to-br from-violet-500 to-fuchsia-400 rounded-2xl xs:rounded-[2rem] text-white flex flex-col lg:flex-row justify-between gap-10">
                     <div class="lg:w-[30%] grid place-items-center" data-aos="fade-right" data-aos-duration="500">
                         <div class="flex items-center justify-center">
                             <div
@@ -150,7 +150,7 @@ const sendEmail = async () => {
                         <div class="flex flex-col justify-center items-center lg:items-start gap-3">
                             <p class="text-center lg:text-left font-extrabold text-xl">Hi, I'm Fajar</p>
                             <h1 class="text-center lg:text-left font-extrabold text-3xl">Junior Web Developer</h1>
-                            <p class="text-center lg:text-left max-w-[25rem] lg:max-w-[100%]">
+                            <p class="text-center lg:text-left max-w-[25rem] md:max-w-[100%]">
                                 with high passion to build an attractive and responsive web application.<br /></p>
                             <div class="flex flex-col sm:flex-row items-center gap-4">
                                 <p class="font-bold text-center">
