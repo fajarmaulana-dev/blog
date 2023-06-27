@@ -16,7 +16,7 @@ export default defineConfig({
       workbox: {
         cleanupOutdatedCaches: false,
         globPatterns: [
-          '**/*.{js,ts,css,html,ico,png,svg,json,vue,txt,woff2,avif,pdf}',
+          '**/*.{js,ts,css,html,ico,png,svg,json,vue,txt,ttf,woff2,avif,pdf}',
         ],
       },
       includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
