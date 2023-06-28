@@ -14,7 +14,6 @@ export default defineConfig({
       registerType: 'autoUpdate',
       injectRegister: 'auto',
       workbox: {
-        cleanupOutdatedCaches: false,
         globPatterns: [
           '**/*.{js,ts,css,html,ico,png,svg,json,vue,txt,ttf,woff2,avif,pdf}',
         ],

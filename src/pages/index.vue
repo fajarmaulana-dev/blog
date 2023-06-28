@@ -181,7 +181,7 @@ const sendEmail = async () => {
                             data-aos-duration="500" :data-aos-delay="`${i + 4}00`"
                             class="h-full w-full lg:w-[13rem] bg-white rounded-xl shadow-[0_1px_8px_0] shadow-fuchsia-400 flex justify-center items-center gap-4 px-3">
                             <i :class="sum.ico"
-                                class="bg-gradient-to-br from-violet-500 to-fuchsia-500 clip hidden sm:block fa-solid"></i>
+                                class="bg-gradient-to-br from-violet-500 to-fuchsia-500 clip !hidden sm:!block fa-solid"></i>
                             <div class="bg-gradient-to-br from-violet-500 to-fuchsia-500 clip">
                                 <p class="text-4xl font-bold text-center flex items-center justify-center gap-3">
                                     {{ sum.amount }} <a v-if="i === 3" title="download certificate"
@@ -229,7 +229,7 @@ const sendEmail = async () => {
                         <div :class="use.style"
                             class="relative w-[6rem] h-[3.25rem] xs:w-[8.35rem] xs:h-[4.15rem] bg-gradient-to-t rounded-t-full">
                             <div
-                                class="absolute w-[5.5rem] h-[3.1rem] xs:w-[7.85rem] xs:h-[3.875rem] bg-white top-[0.3rem] left-1 rounded-t-full grid place-items-center">
+                                class="absolute w-[5.5rem] h-[3.1rem] xs:w-[7.85rem] xs:h-[3.885rem] bg-white top-[0.3rem] left-1 rounded-t-full grid place-items-center">
                                 <img :src="getAssets(use.src)" :class="use.width" class="translate-y-1"
                                     :alt="`${use.title} Icon`">
                             </div>
@@ -280,7 +280,7 @@ const sendEmail = async () => {
                             </div>
                             <div class="flex gap-2 mt-4 select-none">
                                 <a v-if="po.git.length > 0" style="transition: .4s;" :href="po.git" target="_blank"
-                                    class="fa-brands fa-github grid place-items-center bg-slate-700 text-white text-xl min-w-[2.5rem] h-[2.5rem] rounded-md hover:bg-slate-800 active:bg-slate-700"></a>
+                                    class="fa-brands fa-github !grid place-items-center bg-slate-700 text-white text-xl min-w-[2.5rem] h-[2.5rem] rounded-md hover:bg-slate-800 active:bg-slate-700"></a>
                                 <a style="transition: .4s;" :href="po.url" target="_blank"
                                     class="w-full grid place-items-center bg-violet-500 text-white h-[2.5rem] rounded-md font-bold hover:tracking-wider active:tracking-normal">
                                     View Project
