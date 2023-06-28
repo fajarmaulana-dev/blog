@@ -12,8 +12,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Be Vietnam Pro', 'Plus Jakarta Sans', 'Poppins', 'Ubuntu', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: 'Be Vietnam Pro', cursive, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 ::-webkit-scrollbar {

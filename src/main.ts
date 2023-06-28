@@ -4,7 +4,6 @@ import router from './router';
 import 'aos/dist/aos.css';
 import './style.css';
 import './awesome.css';
-import '@fontsource/be-vietnam-pro';
 
 const app = createApp(App);
 app.use(router);
