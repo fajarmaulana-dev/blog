@@ -58,11 +58,11 @@ const skillUsed = [
     { style: 'from-slate-800 via-green-400 to-green-200', text: 'text-slate-800', width: 'w-[calc(55%)]', title: 'Node.js', src: 'node.avif' },
     { style: 'from-neutral-900 via-yellow-400 to-yellow-200', text: 'text-neutral-900', width: 'w-[calc(30%)]', title: 'Express.js', src: 'express.avif' },
     { style: 'from-emerald-600 via-emerald-400 to-stone-200', text: 'text-emerald-600', width: 'w-[calc(18%)]', title: 'MongoDB', src: 'mongo.avif' },
-    { style: 'from-blue-600 via-amber-400 to-yellow-200', text: 'text-blue-600', width: 'w-[calc(35%)]', title: 'Python', src: 'python.avif' },
+    { style: 'from-sky-700 via-amber-400 to-yellow-200', text: 'text-sky-700', width: 'w-[calc(35%)]', title: 'Python', src: 'python.avif' },
     { style: 'from-orange-600 via-amber-400 to-yellow-200', text: 'text-orange-600', width: 'w-[calc(30%)]', title: 'TensorFlow', src: 'tensorflow.avif' },
     { style: 'from-emerald-600 via-emerald-400 to-emerald-200', text: 'text-emerald-600', width: 'w-[calc(30%)]', title: 'FastAPI', src: 'fastapi.avif' },
     { style: 'from-sky-600 via-sky-400 to-sky-200', text: 'text-sky-600', width: 'w-[calc(50%)]', title: 'Docker', src: 'docker.avif' },
-    { style: 'from-lime-500 via-gray-400 to-gray-200', text: 'text-emerald-600', width: 'w-[calc(35%)]', title: 'CorelDraw X8', src: 'corel.avif' },
+    { style: 'from-lime-500 via-gray-400 to-gray-200', text: 'text-lime-600', width: 'w-[calc(35%)]', title: 'CorelDraw X8', src: 'corel.avif' },
 ]
 const learned = [
     { style: 'from-emerald-900 via-emerald-500 to-emerald-200', text: 'text-emerald-900', width: 'w-[calc(35%)]', title: 'Nuxt.js', src: 'nuxt.svg' },
