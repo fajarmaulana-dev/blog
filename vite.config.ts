@@ -14,6 +14,7 @@ export default defineConfig({
       registerType: 'autoUpdate',
       injectRegister: 'auto',
       workbox: {
+        cleanupOutdatedCaches: true,
         globPatterns: [
           '**/*.{js,ts,css,html,ico,png,svg,json,vue,txt,ttf,woff2,avif,pdf}',
         ],
@@ -24,6 +25,7 @@ export default defineConfig({
         short_name: "Fajar's App",
         description: 'Portfolio web application by fajarmaulana.dev',
         theme_color: '#ffffff',
+        background_color: '#ffffff',
         start_url: '/',
         icons: [
           {
