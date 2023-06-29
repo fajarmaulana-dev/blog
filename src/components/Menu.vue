@@ -29,7 +29,7 @@ const trigger = ref(false)
         class="z-[1] select-none bg-white px-[calc(2rem+8vw)] h-[3.5rem] w-full fixed top-0 flex items-center justify-between">
         <div class="h-full w-[2.5rem] grid place-items-center cursor-pointer"
             @click="router.push('/'); (menu as any)[1].act()">
-            <img src="@/assets/fdev.avif" alt="logo">
+            <img src="@/assets/fdev.avif" alt="logo" width="40" height="31">
         </div>
         <div class="hidden sm:flex gap-4 font-medium [&>*]:cursor-pointer hover:[&>*]:text-fuchsia-600">
             <div v-for="a, i in (menu as any)" :key="i" class="relative" style="transition: .4s;"

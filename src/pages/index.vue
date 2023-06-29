@@ -71,11 +71,11 @@ const learned = [
     { style: 'from-sky-900 via-sky-500 to-sky-200', text: 'text-sky-900', width: 'w-[calc(40%)]', title: 'PostgreSQL', src: 'postgresql.avif' },
 ]
 const port = [
-    { img: 'gpp.avif', title: 'GPP System', desc: 'GITS Project Profitability (GPP) System is an application built with Vue.js and TailwindCSS to facilitate profit analysis, project costs analysis, and review employee logtime at PT. GITS Indonesia.', url: 'http://msib-gpp.gits.app/', git: '' },
-    { img: 'fim.avif', title: 'FIM UNNES', desc: 'An application built with MongoDB, Vue.js, Express.js, Node.js, and TailwindCSS with Google indexed and PWA support and used as a medium for organizing the final round of a competition called Forum Ilmiah Matematika Nasional at Universitas Negeri Semarang.', url: 'https://fimunnes.netlify.app/', git: 'https://github.com/fajarmaulana-dev/finalfim' },
-    { img: 'unifact.avif', title: 'UniFact', desc: 'Applications built with Vue.js, FastAPI, TensorFlow, Docker, and TailwindCSS as a project for my bachelor thesis completion. The application is equipped with a Bi-TCN architectural model, so that it can classify Indonesian-language news narratives as valid or hoax.', url: 'https://unifact.netlify.app/', git: 'https://github.com/fajarmaulana-dev/unifact' },
-    { img: 'blog.avif', title: "Fajar's Web App", desc: 'Portfolio apps built with Vue.js and TailwindCSS with Google indexed and PWA support.', url: 'https://fajarmaulana-dev.netlify.app/', git: 'https://github.com/fajarmaulana-dev/blog' },
-    { img: 'uniform.avif', title: 'UniForm', desc: 'Apps built with MongoDB, Vue.js, Express.js, Node.js, Multer, Cloudinary, Google OAauth, and TailwindCSS to dynamically create and manage digital forms.', url: 'https://lpom.netlify.app/app/uniform', git: '' },
+    { img: 'gpp.avif', h: 295, title: 'GPP System', desc: 'GITS Project Profitability (GPP) System is an application built with Vue.js and TailwindCSS to facilitate profit analysis, project costs analysis, and review employee logtime at PT. GITS Indonesia.', url: 'http://msib-gpp.gits.app/', git: '' },
+    { img: 'fim.avif', h: 633, title: 'FIM UNNES', desc: 'An application built with MongoDB, Vue.js, Express.js, Node.js, and TailwindCSS with Google indexed and PWA support and used as a medium for organizing the final round of a competition called Forum Ilmiah Matematika Nasional at Universitas Negeri Semarang.', url: 'https://fimunnes.netlify.app/', git: 'https://github.com/fajarmaulana-dev/finalfim' },
+    { img: 'unifact.avif', h: 641, title: 'UniFact', desc: 'Applications built with Vue.js, FastAPI, TensorFlow, Docker, and TailwindCSS as a project for my bachelor thesis completion. The application is equipped with a Bi-TCN architectural model, so that it can classify Indonesian-language news narratives as valid or hoax.', url: 'https://unifact.netlify.app/', git: 'https://github.com/fajarmaulana-dev/unifact' },
+    { img: 'blog.avif', h: 773, title: "Fajar's Web App", desc: 'Portfolio apps built with Vue.js and TailwindCSS with Google indexed and PWA support.', url: 'https://fajarmaulana-dev.netlify.app/', git: 'https://github.com/fajarmaulana-dev/blog' },
+    { img: 'uniform.avif', h: 323, title: 'UniForm', desc: 'Apps built with MongoDB, Vue.js, Express.js, Node.js, Multer, Cloudinary, Google OAauth, and TailwindCSS to dynamically create and manage digital forms.', url: 'https://lpom.netlify.app/app/uniform', git: '' },
 ]
 
 const user_email = ref('')
@@ -142,7 +142,8 @@ const sendEmail = async () => {
                         <div class="flex items-center justify-center">
                             <div
                                 class="w-[10rem] md:w-[14rem] h-[10rem] md:h-[14rem] grid place-items-center bg-white rounded-full">
-                                <img fetchpriority="high" rel="preload" src="@/assets/propict.avif" alt="profile image" />
+                                <img fetchpriority="high" rel="preload" src="@/assets/propict.avif" width="224" height="224"
+                                    alt="profile image" />
                             </div>
                         </div>
                     </div>
@@ -204,7 +205,7 @@ const sendEmail = async () => {
                     <div class="flex flex-col items-center justify-center xl:flex-row gap-12">
                         <div data-aos="fade-right" data-aos-duration="500"
                             class="relative min-h-[12rem] bg-red-200 w-[12rem] xs:w-[16rem] xl:w-[20rem] flex">
-                            <img src="@/assets/mypict.avif" alt="mypict">
+                            <img src="@/assets/mypict.avif" width="272" height="272" alt="mypict">
                             <div class="absolute z-[-1] -left-4 -top-4 w-[calc(40%)] h-[calc(80%)] bg-violet-400"></div>
                             <div class="absolute z-[-1] -right-4 -bottom-4 w-[calc(80%)] h-[calc(40%)] bg-fuchsia-400">
                             </div>
@@ -230,8 +231,8 @@ const sendEmail = async () => {
                             class="relative w-[6rem] h-[3.25rem] xs:w-[8.35rem] xs:h-[4.15rem] bg-gradient-to-t rounded-t-full">
                             <div
                                 class="absolute w-[5.5rem] h-[3.1rem] xs:w-[7.85rem] xs:h-[3.885rem] bg-white top-[0.3rem] left-1 rounded-t-full grid place-items-center">
-                                <img :src="getAssets(use.src)" :class="use.width" class="translate-y-1"
-                                    :alt="`${use.title} Icon`">
+                                <img :src="getAssets(use.src)" width="38" height="43" :class="use.width"
+                                    class="translate-y-1" :alt="`${use.title} Icon`">
                             </div>
                         </div>
                         <p class="text-center font-black text-[.8rem] xs:text-lg" :class="use.text">{{ use.title }}</p>
@@ -251,8 +252,8 @@ const sendEmail = async () => {
                             class="relative w-[6rem] h-[3.25rem] xs:w-[8.35rem] xs:h-[4.15rem] bg-gradient-to-t rounded-t-full">
                             <div
                                 class="absolute w-[5.5rem] h-[3.1rem] xs:w-[7.85rem] xs:h-[3.875rem] bg-white top-[0.3rem] left-1 rounded-t-full grid place-items-center">
-                                <img :src="getAssets(use.src)" :class="use.width" class="translate-y-1"
-                                    :alt="`${use.title} Icon`">
+                                <img :src="getAssets(use.src)" width="38" height="43" :class="use.width"
+                                    class="translate-y-1" :alt="`${use.title} Icon`">
                             </div>
                         </div>
                         <p class="text-center font-black text-[.8rem] xs:text-lg" :class="use.text">{{ use.title }}</p>
@@ -270,7 +271,7 @@ const sendEmail = async () => {
                         :data-aos-delay="`${i}00`"
                         class="min-w-[18rem] overflow-hidden h-full bg-white shadow-[0_1px_8px_0] shadow-violet-500 rounded-[1.25rem] flex flex-col">
                         <div class="w-full h-[11rem] overflow-hidden cursor-zoom-in" @click="openModal(i)">
-                            <img fetchpriority="high" rel="preload" :src="getAssets(po.img)" width="288"
+                            <img fetchpriority="high" rel="preload" :src="getAssets(po.img)" width="288" :height="po.h"
                                 :alt="`${po.title} Thumbnail`">
                         </div>
                         <div class="p-4 flex flex-col h-[17.75rem] justify-between">
@@ -279,9 +280,11 @@ const sendEmail = async () => {
                                 <div class="text-slate-800 text-sm">{{ po.desc }}</div>
                             </div>
                             <div class="flex gap-2 mt-4 select-none">
-                                <a v-if="po.git.length > 0" style="transition: .4s;" :href="po.git" target="_blank"
+                                <a v-if="po.git.length > 0" style="transition: .4s;" :href="po.git"
+                                    :aria-label="`View github repository of ${po.title}`" target="_blank"
                                     class="fa-brands fa-github !grid place-items-center bg-slate-700 text-white text-xl min-w-[2.5rem] h-[2.5rem] rounded-md hover:bg-slate-800 active:bg-slate-700"></a>
                                 <a style="transition: .4s;" :href="po.url" target="_blank"
+                                    :aria-label="`View ${po.title} application`"
                                     class="w-full grid place-items-center bg-violet-500 text-white h-[2.5rem] rounded-md font-bold hover:tracking-wider active:tracking-normal">
                                     View Project
                                 </a>
@@ -307,7 +310,7 @@ const sendEmail = async () => {
                                     Contact Me
                                 </p>
                                 <div class="w-[8.5rem] h-[8.5rem] xs:w-[11rem] xs:h-[11rem] flex flex-col items-center">
-                                    <img src="@/assets/wa.png" alt="">
+                                    <img src="@/assets/wa.png" width="176" height="176" alt="whatsapp code">
                                     <a href="https://wa.me/6285842039127" target="_blank"
                                         class="text-xs xs:text-sm font-medium mt-1 cursor-pointer hover:underline">
                                         wa.me/6285842039127</a>
@@ -395,7 +398,7 @@ const sendEmail = async () => {
     <div class="w-full p-3 bg-violet-400 text-violet-100 flex flex-col gap-1 items-center">
         <div class="flex items-center justify-center gap-x-6 xs:gap-x-10">
             <div class="w-[2.75rem] h-[2.75rem] grid place-items-center">
-                <img src="@/assets/fdev.avif" alt="logo" class="logo">
+                <img src="@/assets/fdev.avif" width="46" height="35" alt="logo" class="logo">
             </div>
             <div class="flex justify-center gap-3 xs:gap-5">
                 <a style="transition: .4s;" v-for="social, i in socials" :key="i" :href="social.url"
