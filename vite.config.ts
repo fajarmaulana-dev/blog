@@ -26,8 +26,7 @@ export default defineConfig({
         description: 'Portfolio web application by fajarmaulana.dev',
         theme_color: '#ffffff',
         background_color: '#ffffff',
-        start_url: 'https://fajarmaulana-dev.netlify.app/',
-        scope: 'https://fajarmaulana-dev.netlify.app/',
+        start_url: '/',
         icons: [
           {
             src: 'pwa-192x192.png',
