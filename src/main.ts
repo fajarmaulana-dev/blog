@@ -4,6 +4,8 @@ import router from './router';
 import 'aos/dist/aos.css';
 import './style.css';
 import './awesome.css';
+import {registerSW} from 'virtual:pwa-register';
+registerSW({immediate: true});
 
 const app = createApp(App);
 app.use(router);
