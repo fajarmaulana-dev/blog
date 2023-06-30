@@ -26,6 +26,7 @@ export default defineConfig({
         description: 'Portfolio web application by fajarmaulana.dev',
         theme_color: '#ffffff',
         background_color: '#ffffff',
+        id: '/',
         start_url: '/',
         icons: [
           {
