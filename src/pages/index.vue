@@ -200,8 +200,8 @@ const sendEmail = async () => {
                 </div>
             </div>
         </section>
-        <section id="about" :class="screenHeight > 1000 ? 'pt-[7rem]' : 'pt-[3.5rem]'" class="pb-[3.5rem] bg-white">
-            <div :class="screenHeight > 1000 ? 'h-full' : 'min-h-[calc(100vh-3.5rem)]'"
+        <section id="about" class="pt-[3.5rem] bg-white">
+            <div :class="screenHeight > 1000 ? 'h-full' : 'min-h-screen'"
                 class="bg-fuchsia-100 md:rounded-r-[30vw] py-[3.5rem] px-[calc(.5rem+8vw)] grid place-items-center">
                 <div class="w-full sm:px-[calc(1rem+11vw)] text-violet-500">
                     <h2 class="text-center font-bold text-3xl mb-12" data-aos="fade-left" data-aos-duration="500">About Me
@@ -223,7 +223,7 @@ const sendEmail = async () => {
                 </div>
             </div>
         </section>
-        <section id="skills" class="pt-[7rem] grid place-items-center">
+        <section id="skills" class="pt-[5rem] grid place-items-center">
             <div class="text-violet-500 px-[calc(.5rem+8vw)]">
                 <h2 class="text-center font-bold text-3xl mb-8" data-aos="fade-left" data-aos-duration="500">Skills</h2>
                 <p class="text-center font-bold text-lg mb-4" data-aos="fade-left" data-aos-duration="500">
@@ -265,7 +265,7 @@ const sendEmail = async () => {
                 </div>
             </div>
         </section>
-        <section id="portfolio" class="pt-[7rem] pb-[3.5rem] px-0 sm:px-[calc(.5rem+6vw)] grid place-items-center">
+        <section id="portfolio" class="pt-[5rem] pb-[2rem] px-0 sm:px-[calc(.5rem+6vw)] grid place-items-center">
             <div class="text-violet-500 w-[calc(86vw)] sm:w-[calc(84vw-2rem)]">
                 <h2 class="text-center font-bold text-3xl mb-2" data-aos="fade-right" data-aos-duration="500">Portfolio</h2>
                 <p class="text-center font-bold text-lg mb-6" data-aos="fade-left" data-aos-duration="500">Here are some
