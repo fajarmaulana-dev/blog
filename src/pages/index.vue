@@ -12,6 +12,7 @@ import emailjs from 'emailjs-com';
 
 const onScrollY = ref(window.scrollY);
 const screenWidth = ref(window.innerWidth);
+const screenHeight = ref(window.innerHeight)
 onMounted(() => {
     window.addEventListener('scroll', () => {
         onScrollY.value = window.scrollY;
@@ -19,10 +20,13 @@ onMounted(() => {
     window.addEventListener('resize', () => {
         screenWidth.value = window.innerWidth;
     })
+    window.addEventListener('resize', () => {
+        screenHeight.value = window.innerHeight;
+    })
     AOS.init();
 })
 
-const scroll = (id: string) => (document as any).getElementById(id).scrollIntoView({ behavior: 'smooth' })
+const scroll = (id: string) => (document as any).getElementById(id).scrollIntoView({ behavior: 'smooth', block: screenHeight.value > 1000 ? 'center' : 'start' })
 const getAssets = (path: string) => {
     return new URL(`/src/assets/${path}`, import.meta.url).href
 }
@@ -133,8 +137,8 @@ const sendEmail = async () => {
 <template>
     <Menu :menu="link" />
     <div class="relative">
-        <section id="home"
-            class="min-h-screen pt-0 sm:pt-[1vw] lg:pt-0 pb-[3.5rem] px-[calc(.35rem+3.5vw)] xs:px-[calc(.5rem+6vw)] grid place-items-center">
+        <section id="home" :class="screenHeight > 1000 ? 'h-full' : 'min-h-screen'"
+            class="pt-0 sm:pt-[1vw] lg:pt-0 pb-[3.5rem] px-[calc(.35rem+3.5vw)] xs:px-[calc(.5rem+6vw)] grid place-items-center">
             <div class="w-full">
                 <div
                     class="w-full px-4 mt-[3.5rem] py-6 xs:py-10 xs:px-8 sm:py-12 lg:py-24 bg-gradient-to-br from-violet-500 to-fuchsia-400 rounded-2xl xs:rounded-[2rem] text-white flex flex-col lg:flex-row justify-between gap-10">
@@ -196,9 +200,9 @@ const sendEmail = async () => {
                 </div>
             </div>
         </section>
-        <section id="about" class="min-h-screen py-[3.5rem] bg-white">
-            <div
-                class="min-h-screen bg-fuchsia-100 md:rounded-r-[30vw] py-[3.5rem] px-[calc(.5rem+8vw)] grid place-items-center">
+        <section id="about" :class="screenHeight > 1000 ? 'pt-[7rem]' : 'pt-[3.5rem]'" class="pb-[3.5rem] bg-white">
+            <div :class="screenHeight > 1000 ? 'h-full' : 'min-h-[calc(100vh-3.5rem)]'"
+                class="bg-fuchsia-100 md:rounded-r-[30vw] py-[3.5rem] px-[calc(.5rem+8vw)] grid place-items-center">
                 <div class="w-full sm:px-[calc(1rem+11vw)] text-violet-500">
                     <h2 class="text-center font-bold text-3xl mb-12" data-aos="fade-left" data-aos-duration="500">About Me
                     </h2>
@@ -219,7 +223,7 @@ const sendEmail = async () => {
                 </div>
             </div>
         </section>
-        <section id="skills" class="min-h-screen py-[3.5rem] grid place-items-center">
+        <section id="skills" class="pt-[7rem] grid place-items-center">
             <div class="text-violet-500 px-[calc(.5rem+8vw)]">
                 <h2 class="text-center font-bold text-3xl mb-8" data-aos="fade-left" data-aos-duration="500">Skills</h2>
                 <p class="text-center font-bold text-lg mb-4" data-aos="fade-left" data-aos-duration="500">
@@ -230,7 +234,7 @@ const sendEmail = async () => {
                         <div :class="use.style"
                             class="relative w-[6rem] h-[3.25rem] xs:w-[8.35rem] xs:h-[4.15rem] bg-gradient-to-t rounded-t-full">
                             <div
-                                class="absolute w-[5.5rem] h-[3.1rem] xs:w-[7.85rem] xs:h-[3.885rem] bg-white top-[0.3rem] left-1 rounded-t-full grid place-items-center">
+                                class="absolute w-[5.5rem] h-[3.1rem] xs:w-[7.85rem] xs:h-[3.95rem] bg-white top-[0.3rem] left-1 rounded-t-full grid place-items-center">
                                 <img :src="getAssets(use.src)" width="38" height="43" :class="use.width"
                                     class="translate-y-1" :alt="`${use.title} Icon`">
                             </div>
@@ -261,7 +265,7 @@ const sendEmail = async () => {
                 </div>
             </div>
         </section>
-        <section id="portfolio" class="min-h-screen py-[3.5rem] px-0 sm:px-[calc(.5rem+6vw)] grid place-items-center">
+        <section id="portfolio" class="pt-[7rem] pb-[3.5rem] px-0 sm:px-[calc(.5rem+6vw)] grid place-items-center">
             <div class="text-violet-500 w-[calc(86vw)] sm:w-[calc(84vw-2rem)]">
                 <h2 class="text-center font-bold text-3xl mb-2" data-aos="fade-right" data-aos-duration="500">Portfolio</h2>
                 <p class="text-center font-bold text-lg mb-6" data-aos="fade-left" data-aos-duration="500">Here are some
@@ -294,7 +298,7 @@ const sendEmail = async () => {
                 </div>
             </div>
         </section>
-        <section id="contact" class="min-h-screen py-[3.5rem] px-0 sm:px-[calc(.5rem+6vw)] grid place-items-center">
+        <section id="contact" class="py-[3.5rem] px-0 sm:px-[calc(.5rem+6vw)] grid place-items-center">
             <div class="w-full flex flex-col lg:flex-row" data-aos="fade-left" data-aos-duration="500">
                 <div class="bg-violet-500 text-white p-4 xs:p-8 sm:p-12 w-full lg:w-[30rem] grid place-items-center">
                     <div>
