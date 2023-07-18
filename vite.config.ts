@@ -14,6 +14,24 @@ export default defineConfig({
       registerType: 'autoUpdate',
       injectRegister: 'auto',
       workbox: {
+        runtimeCaching: [
+          {
+            urlPattern: ({url}) => {
+              return url.pathname.startsWith('/api');
+            },
+            handler: 'CacheFirst' as const,
+            options: {
+              cacheName: 'fajars-api-cache',
+              expiration: {
+                maxEntries: 500,
+                maxAgeSeconds: 60 * 60 * 24 * 365 * 2, // 2 years
+              },
+              cacheableResponse: {
+                statuses: [0, 200],
+              },
+            },
+          },
+        ],
         cleanupOutdatedCaches: true,
         globPatterns: [
           '**/*.{js,ts,css,html,ico,png,svg,json,vue,txt,ttf,woff2,avif,pdf}',
