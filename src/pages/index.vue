@@ -46,7 +46,7 @@ const starter = [
     { style: 'bg-white', span: 'bg-gradient-to-br from-violet-600 to-fuchsia-500 clip', title: "Let's Talk !", act: () => scroll('contact') },
 ]
 const summary = [
-    { ico: 'sm:text-[3.25rem] lg:text-[2.5rem] xl:text-[3.25rem] fa-circle-check', amount: '5', title: 'Completed Project' },
+    { ico: 'sm:text-[3.25rem] lg:text-[2.5rem] xl:text-[3.25rem] fa-circle-check', amount: '4', title: 'Completed Project' },
     { ico: 'sm:text-[3.15rem] lg:text-[2.45rem] xl:text-[3.15rem] fa-robot', amount: '1', title: 'DL Based Project' },
     { ico: 'sm:text-[3rem] lg:text-[2.25rem] xl:text-[3rem] fa-code', amount: `+${new Date().getFullYear() - 2022}`, title: 'Year Experience' },
     { ico: 'sm:text-[3.25rem] lg:text-[2.5rem] xl:text-[3.25rem] fa-certificate', amount: '3', title: 'Tech Certificate' },
@@ -79,7 +79,6 @@ const port = [
     { img: 'fim.avif', h: 633, title: 'FIM UNNES', desc: 'An application built with MongoDB, Vue.js, Express.js, Node.js, and TailwindCSS with Google indexed and PWA support and used as a medium for organizing the final round of a competition called Forum Ilmiah Matematika Nasional at Universitas Negeri Semarang.', url: 'https://fimunnes.netlify.app/', git: 'https://github.com/fajarmaulana-dev/finalfim' },
     { img: 'unifact.avif', h: 641, title: 'UniFact', desc: 'Applications built with Vue.js, FastAPI, TensorFlow, Docker, and TailwindCSS as a project for my bachelor thesis completion. The application is equipped with a Bi-TCN architectural model, so that it can classify Indonesian-language news narratives as valid or hoax.', url: 'https://unifact.netlify.app/', git: 'https://github.com/fajarmaulana-dev/unifact' },
     { img: 'blog.avif', h: 773, title: "Fajar's Web App", desc: 'Portfolio apps built with Vue.js and TailwindCSS with Google indexed and PWA support.', url: 'https://fajarmaulana-dev.netlify.app/', git: 'https://github.com/fajarmaulana-dev/blog' },
-    { img: 'uniform.avif', h: 323, title: 'UniForm', desc: 'Apps built with MongoDB, Vue.js, Express.js, Node.js, Multer, Cloudinary, Google OAauth, and TailwindCSS to dynamically create and manage digital forms.', url: 'https://lpom.netlify.app/app/uniform', git: '' },
 ]
 
 const user_email = ref('')
@@ -275,8 +274,7 @@ const sendEmail = async () => {
                         :data-aos-delay="`${i}00`"
                         class="min-w-[18rem] overflow-hidden h-full bg-white shadow-[0_1px_8px_0] shadow-violet-500 rounded-[1.25rem] flex flex-col">
                         <div class="w-full h-[11rem] overflow-hidden cursor-zoom-in" @click="openModal(i)">
-                            <img fetchpriority="high" rel="preload" :src="getAssets(po.img)" width="288" :height="po.h"
-                                :alt="`${po.title} Thumbnail`">
+                            <img :src="getAssets(po.img)" width="288" :height="po.h" :alt="`${po.title} Thumbnail`">
                         </div>
                         <div class="p-4 flex flex-col h-[17.75rem] justify-between">
                             <div>
