@@ -18,7 +18,7 @@ onMounted(() => {
     AOS.init()
     typer('#typer')
         .line('Fajar Maulana').pause(4000).back('all')
-        .continue('a MEVN Developer').pause(4000).back('all')
+        .continue('MEVN Developer').pause(4000).back('all')
         .repeat(Infinity)
 })
 const open = ref<boolean>(false)
