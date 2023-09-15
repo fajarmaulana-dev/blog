@@ -28,8 +28,8 @@ const tech = [
     ['TensorFlow', 'FastAPI', 'Docker']
 ]
 const work_data: Record<string, string> = {
-    'FIM UNNES - Aug/2022': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, praesentium aperiam! Saepe molestiae veniam quo! Placeat beatae ad illum ab sunt aliquid quibusdam porro, reiciendis ipsum facere, nesciunt nisi quaerat?',
-    'GITS.ID - Feb/2022': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, praesentium aperiam! Saepe molestiae veniam quo! Placeat beatae ad illum ab sunt aliquid quibusdam porro, reiciendis ipsum facere, nesciunt nis'
+    'FIM UNNES - Aug/2022': 'On this occasion, I was required to learn backend development because the project I was working on here was a Fullstack web project. I chose to use Node.js and Express.js as the framework for the backend side, and MongoDB as the database. On the frontend side, I also learned to use Quill.js as a Richtext Editor and PWA to build a website that can be installed on mobile and desktop devices and supports page loading without internet access.',
+    'GITS.ID - Feb/2022': 'This is the first time I started my career as a web developer. I interned at PT. GITS Indonesia through the Certified Internship program from the Ministry of Education and Culture. Here I learned a lot about using Vue.js, TailwindCSS, Vuetify, and Highcharts to build a dashboard page display that displays several data presentations in the form of line charts, pie charts, and tables within a certain month range. I also learned how to integrate the Frontend with the Backend via API using Axios. Apart from that, I also learned the development methods at this company which used the SCRUM method and several tools such as Trello as a framework and the use of Husky in commit management.'
 }
 const work = ref<string>(Object.keys(work_data)[0])
 
@@ -287,7 +287,8 @@ const social: Record<string, string> = { 'Github': 'https://github.com/fajarmaul
                     </div>
                 </div>
             </div>
-            <section @click="closeModal()" class="fixed z-[2] h-screen w-screen bg-cyan-300/10 top-0 left-0 p-[3.75rem]"
+            <section @click="closeModal()"
+                class="fixed z-[2] h-screen w-screen bg-cyan-300/10 top-0 left-0 p-[calc(1.9rem+1.9vw)]"
                 :class="modal.container ? 'block' : 'hidden'" style="transition: .1s; transition-delay: .1s;">
                 <div :class="modal.box ? 'scale-100' : 'scale-0'" style="transition: .3s;"
                     class="w-full h-full transform-gpu bg-slate-900 rounded-lg flex items-center justify-center shadow-[0_0_20px_1px] shadow-cyan-400/50 relative overflow-hidden">
@@ -400,14 +401,14 @@ const social: Record<string, string> = { 'Github': 'https://github.com/fajarmaul
     }
 }
 
-@media screen and (max-height: 40rem) {
+@media screen and (max-height: 35rem) {
     .mini {
         column-gap: 3rem;
         row-gap: 2rem;
     }
 }
 
-@media screen and (min-height: 40.1rem) {
+@media screen and (min-height: 35.1rem) {
     .mini {
         gap: 4rem;
     }
