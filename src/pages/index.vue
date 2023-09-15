@@ -353,8 +353,8 @@ const social: Record<string, string> = { 'Github': 'https://github.com/fajarmaul
                 </Form>
             </div>
         </div>
-        <div :class="loading ? 'bottom-0 opacity-100' : '-bottom-full opacity-80'"
-            style="transition: bottom .65s, opacity .65s;" class="fixed left-0 h-screen w-full bg-white z-[4]">
+        <div :class="loading ? 'bottom-0 opacity-100' : '-bottom-[calc(100%+4rem)] opacity-30'"
+            style="transition: bottom .65s, opacity .65s;" class="fixed left-0 h-screen w-full bg-[rgb(10,25,47)] z-[4]">
             <div v-if="loading" class="h-full w-full overflow-hidden relative flex items-center justify-center scene">
                 <i v-for="i in Math.floor(screenWidth / 18)" class="star absolute -top-4 w-0.5 bg-cyan-100 rounded-full"
                     :style="`height: ${25 + (Math.random() * 100)}px; left: ${Math.floor(Math.random() * screenWidth)}px; animation-duration: ${(Math.random() * 100) + 1}s`"></i>
