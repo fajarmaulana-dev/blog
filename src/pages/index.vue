@@ -119,7 +119,7 @@ const social: Record<string, string> = { 'Github': 'https://github.com/fajarmaul
     <div
         class="fixed z-[2] flex items-center justify-between h-16 w-full top-0 left-0 bg-[rgb(10,25,47)]/50 backdrop-blur-lg px-7 sd:px-10 sm:px-9 lg:px-[3.75rem]">
         <a class="h-10" href="#" aria-label="home" data-aos="fade-right" data-aos-duration="2000">
-            <img src="@/assets/fdev.avif" alt="logo" class="h-full">
+            <img src="@/assets/fdev.avif" width="29" height="40" alt="logo" class="h-full">
         </a>
         <div class="hidden sm:flex justify-end items-center gap-5 lg:gap-6" data-aos="fade-left" data-aos-duration="2000">
             <Menus />
@@ -154,7 +154,7 @@ const social: Record<string, string> = { 'Github': 'https://github.com/fajarmaul
             </div>
         </div>
     </div>
-    <div class="min-h-screen bg-[rgb(10,25,47)] px-7 sd:px-10 sm:px-28 lg:px-40 pb-4">
+    <div class="bg-[rgb(10,25,47)] px-7 sd:px-10 sm:px-28 lg:px-40 pb-4">
         <div class="pt-[10.5rem] pb-64" data-aos="fade-down" data-aos-duration="2000">
             <h1 class="mb-1.5 dmon text-cyan-300 text-sm sd:text-base md:text-lg">Hi, I am</h1>
             <div
@@ -199,7 +199,7 @@ const social: Record<string, string> = { 'Github': 'https://github.com/fajarmaul
                 </div>
                 <div
                     class="relative z-0 w-44 sd:min-w-[18rem] h-44 sd:h-72 rounded-md border-[3px] border-cyan-300 [&>*]:-translate-x-4 [&>*]:translate-y-4 [&>*]:rounded-md">
-                    <img src="@/assets/mypict.avif" alt="mypict" class="h-full">
+                    <img src="@/assets/mypict.avif" width="288" height="288" alt="mypict" class="h-full">
                     <span class="absolute inset-0 bg-cyan-300/60 hover:opacity-0 [transition:.5s]"></span>
                 </div>
             </div>
@@ -401,14 +401,14 @@ const social: Record<string, string> = { 'Github': 'https://github.com/fajarmaul
     }
 }
 
-@media screen and (max-height: 35rem) {
+@media screen and (max-height: 37.5rem) {
     .mini {
         column-gap: 3rem;
         row-gap: 2rem;
     }
 }
 
-@media screen and (min-height: 35.1rem) {
+@media screen and (min-height: 37.6rem) {
     .mini {
         gap: 4rem;
     }

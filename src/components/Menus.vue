@@ -32,7 +32,7 @@ const menu: Record<string, string> = { 'user-tie': 'About', 'briefcase': 'Work',
 </template>
 
 <style scoped>
-@media screen and (max-height: 35rem) {
+@media screen and (max-height: 37.5rem) {
     .mini {
         flex-direction: row;
         flex-wrap: wrap;
@@ -42,7 +42,7 @@ const menu: Record<string, string> = { 'user-tie': 'About', 'briefcase': 'Work',
     }
 }
 
-@media screen and (min-height: 35.1rem) {
+@media screen and (min-height: 37.6rem) {
     .mini {
         flex-direction: column;
         gap: 4rem;
