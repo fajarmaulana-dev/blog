@@ -155,7 +155,7 @@ const social: Record<string, string> = { 'Github': 'https://github.com/fajarmaul
         </div>
     </div>
     <div class="bg-[rgb(10,25,47)] px-7 sd:px-10 sm:px-28 lg:px-40 pb-4">
-        <div class="pt-[calc(5.5rem+5.5vw)] pb-64" data-aos="fade-down" data-aos-duration="2000">
+        <div class="pt-[calc(5.5rem+5.5vw)] pb-[calc(9rem+8vw)]" data-aos="fade-down" data-aos-duration="2000">
             <h1 class="mb-1.5 dmon text-cyan-300 text-sm sd:text-base md:text-lg">Hi, I am</h1>
             <div
                 class="viet clip bg-gradient-to-b from-gray-200 to-slate-400 [&>h1]:font-bold [&>h1]:text-[1.65rem] [&>h1]:leading-[2rem] xs:[&>h1]:text-[1.9rem] xs:[&>h1]:leading-[2.5rem] sd:[&>h1]:text-[2.9rem] sd:[&>h1]:leading-[3.5rem] md:[&>h1]:text-[3.7rem] md:[&>h1]:leading-[4.3rem] lg:[&>h1]:text-[4rem] lg:[&>h1]:leading-[4.5rem] xl:[&>h1]:text-[4.25rem] xl:[&>h1]:leading-[4.75rem]">
@@ -175,7 +175,7 @@ const social: Record<string, string> = { 'Github': 'https://github.com/fajarmaul
                 <a href="#contact" class="text-cyan-300 font-medium hover:bg-cyan-950 active:bg-transparent">Say Hello</a>
             </div>
         </div>
-        <div id="about" class="pt-20 pb-32">
+        <div id="about" class="pt-[calc(3.5rem+2.5vw)] pb-[calc(5rem+4vw)]">
             <h2 class="viet text-gray-200 text-3xl sd:text-4xl font-bold mb-6"><span
                     class="dmon text-cyan-300 text-2xl sd:text-3xl">01.</span>
                 About Me
@@ -204,7 +204,7 @@ const social: Record<string, string> = { 'Github': 'https://github.com/fajarmaul
                 </div>
             </div>
         </div>
-        <div id="work" class="pt-20 pb-32 lg:grid place-items-center">
+        <div id="work" class="pt-[calc(3.5rem+2.5vw)] pb-[calc(5rem+4vw)] lg:grid place-items-center">
             <div class="lg:w-[70%]">
                 <h2 class="viet text-gray-200 text-3xl sd:text-4xl font-bold mb-6"><span
                         class="dmon text-cyan-300 text-2xl sd:text-3xl">02.</span>
@@ -227,12 +227,12 @@ const social: Record<string, string> = { 'Github': 'https://github.com/fajarmaul
                 </div>
             </div>
         </div>
-        <div id="project" class="pt-20 pb-12 lg:px-[calc(2.5rem+2.5vw)]">
+        <div id="project" class="pt-[calc(3.5rem+2.5vw)] pb-[calc(2.5rem+1.5vw)] lg:px-[calc(2.5rem+2.5vw)]">
             <h2 class="viet text-gray-200 text-3xl sd:text-4xl font-bold mb-6"><span
                     class="dmon text-cyan-300 text-2xl sd:text-3xl">03.</span>
                 Some Things I Built
             </h2>
-            <div class="flex flex-col gap-16 md:gap-32">
+            <div class="flex flex-col gap-[calc(2.5rem+2vw)] md:gap-[calc(4.5rem+4vw)]">
                 <div v-for="x, y in project" :key="y" data-aos="fade-up" data-aos-duration="1500"
                     class="viet md:bg-transparent px-6 py-4 md:py-1 md:px-0 relative flex flex-col justify-start">
                     <div
@@ -305,7 +305,8 @@ const social: Record<string, string> = { 'Github': 'https://github.com/fajarmaul
                 </div>
             </section>
         </div>
-        <div id="contact" class="pt-40 pb-48 grid place-items-center" data-aos="fade-up" data-aos-duration="2000">
+        <div id="contact" class="pt-[calc(6rem+5vw)] pb-[calc(3rem+2vw)] grid place-items-center" data-aos="fade-up"
+            data-aos-duration="2000">
             <div class="sm:w-[80%] lg:w-[35rem] flex flex-col items-center">
                 <h2 class="dmon text-cyan-300 sd:text-lg tracking-wide">04. What's Next?</h2>
                 <h2 class="viet text-gray-200 text-3xl sd:text-4xl font-bold">Get In Touch</h2>
@@ -364,7 +365,7 @@ const social: Record<string, string> = { 'Github': 'https://github.com/fajarmaul
                 <i class="fas fa-rocket text-[5rem] text-gray-200 relative rocket"></i>
             </div>
         </div>
-        <div class="pt-4 text-slate-300">
+        <div class="pt-[calc(1.5rem+.5vw)] text-slate-300">
             <div
                 class="flex sm:hidden items-center justify-center text-xl sd:text-2xl gap-6 sd:gap-8 mb-2 hover:[&>*]:text-cyan-300 [&>*]:[transition:.4s]">
                 <a v-for="i in Object.keys(social)" :href="social[i]" :aria-label="i" target="_blank" class="peer fab"
