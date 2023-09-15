@@ -155,7 +155,7 @@ const social: Record<string, string> = { 'Github': 'https://github.com/fajarmaul
         </div>
     </div>
     <div class="bg-[rgb(10,25,47)] px-7 sd:px-10 sm:px-28 lg:px-40 pb-4">
-        <div class="pt-[10.5rem] pb-64" data-aos="fade-down" data-aos-duration="2000">
+        <div class="pt-[calc(5.5rem+5.5vw)] pb-64" data-aos="fade-down" data-aos-duration="2000">
             <h1 class="mb-1.5 dmon text-cyan-300 text-sm sd:text-base md:text-lg">Hi, I am</h1>
             <div
                 class="viet clip bg-gradient-to-b from-gray-200 to-slate-400 [&>h1]:font-bold [&>h1]:text-[1.65rem] [&>h1]:leading-[2rem] xs:[&>h1]:text-[1.9rem] xs:[&>h1]:leading-[2.5rem] sd:[&>h1]:text-[2.9rem] sd:[&>h1]:leading-[3.5rem] md:[&>h1]:text-[3.7rem] md:[&>h1]:leading-[4.3rem] lg:[&>h1]:text-[4rem] lg:[&>h1]:leading-[4.5rem] xl:[&>h1]:text-[4.25rem] xl:[&>h1]:leading-[4.75rem]">
