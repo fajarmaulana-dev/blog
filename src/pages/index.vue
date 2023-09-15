@@ -124,8 +124,8 @@ const social: Record<string, string> = { 'Github': 'https://github.com/fajarmaul
         <div class="hidden sm:flex justify-end items-center gap-5 lg:gap-6" data-aos="fade-left" data-aos-duration="2000">
             <Menus />
         </div>
-        <button class="dmon font-medium block sm:hidden tracking-wider text-cyan-300 z-[3]" @click="open = !open">{{ open ?
-            'Close' : 'Menu' }}</button>
+        <button class="dmon font-medium block sm:hidden tracking-wider text-cyan-300 z-[3]" @click="open = !open"
+            data-aos="fade-left" data-aos-duration="2000">{{ open ? 'Close' : 'Menu' }}</button>
         <div :class="open ? 'left-0 opacity-100' : '-left-full opacity-30'" style="transition: left .65s, opacity .65s;"
             class="fixed flex flex-col items-end mini justify-center px-5 xs:px-10 sm:hidden top-0 h-screen w-full bg-[rgb(10,25,47)] z-[2]">
             <Menus mini @select="open = false" />
