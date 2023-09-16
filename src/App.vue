@@ -15,6 +15,10 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+:root {
+  color-scheme: only light;
+}
+
 button,
 a {
   user-select: none;
