@@ -305,7 +305,7 @@ const social: Record<string, string> = { 'Github': 'https://github.com/fajarmaul
                 </div>
             </section>
         </div>
-        <div id="contact" class="pt-[calc(6rem+5vw)] pb-[calc(3rem+2vw)] grid place-items-center" data-aos="fade-up"
+        <div id="contact" class="pt-[calc(6rem+5vw)] pb-[calc(3rem+2.5vw)] grid place-items-center" data-aos="fade-up"
             data-aos-duration="2000">
             <div class="sm:w-[80%] lg:w-[35rem] flex flex-col items-center">
                 <h2 class="dmon text-cyan-300 sd:text-lg tracking-wide">04. What's Next?</h2>
@@ -365,7 +365,7 @@ const social: Record<string, string> = { 'Github': 'https://github.com/fajarmaul
                 <i class="fas fa-rocket text-[5rem] text-gray-200 relative rocket"></i>
             </div>
         </div>
-        <div class="pt-[calc(1.5rem+.5vw)] text-slate-300">
+        <div class="pt-[calc(1.5rem+1vw)] text-slate-300">
             <div
                 class="flex sm:hidden items-center justify-center text-xl sd:text-2xl gap-6 sd:gap-8 mb-2 hover:[&>*]:text-cyan-300 [&>*]:[transition:.4s]">
                 <a v-for="i in Object.keys(social)" :href="social[i]" :aria-label="i" target="_blank" class="peer fab"
