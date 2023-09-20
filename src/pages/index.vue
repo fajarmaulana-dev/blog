@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, reactive } from '@vue/reactivity';
-import { onMounted } from '@vue/runtime-core'
+import { onMounted, watch } from '@vue/runtime-core'
 import Menus from '~/Menus.vue';
 import TextLine from '~/TextLine.vue';
 import { getAssets } from '~/.';
@@ -84,6 +84,13 @@ const toast = reactive({ success: false, error: false })
 const text = ref('')
 const hasSend = ref(false)
 const revision = ref(false)
+const animation = ref(false)
+
+watch([user_email, user_name, message], () => {
+    if (user_email.value !== '' && user_name.value !== '' && message.value !== '') animation.value = true;
+    else animation.value = false
+})
+
 const sendEmail = async () => {
     loading.value = true
     try {
@@ -98,6 +105,7 @@ const sendEmail = async () => {
     loading.value = false
     hasSend.value = true
     revision.value = false
+    animation.value = false
 }
 
 const reset = () => {
@@ -107,7 +115,10 @@ const reset = () => {
         user_email.value = ''
         message.value = ''
     }
-    if (toast.error) revision.value = true
+    if (toast.error) {
+        revision.value = true
+        animation.value = true
+    }
     toast.error = false;
     toast.success = false;
 }
@@ -356,7 +367,7 @@ const social: Record<string, string> = { 'Github': 'https://github.com/fajarmaul
         </div>
         <div :class="loading ? 'bottom-0 opacity-100' : '-bottom-[calc(100%+4rem)] opacity-30'"
             style="transition: bottom .65s, opacity .65s;" class="fixed left-0 h-screen w-full bg-[rgb(10,25,47)] z-[4]">
-            <div v-if="loading" class="h-full w-full overflow-hidden relative flex items-center justify-center scene">
+            <div v-if="animation" class="h-full w-full overflow-hidden relative flex items-center justify-center scene">
                 <i v-for="i in Math.floor(screenWidth / 18)" class="star absolute -top-4 w-0.5 bg-cyan-100 rounded-full"
                     :style="`height: ${25 + (Math.random() * 100)}px; left: ${Math.floor(Math.random() * screenWidth)}px; animation-duration: ${(Math.random() * 100) + 1}s`"></i>
                 <span class="flare absolute -translate-x-[5px] -translate-y-[100px]"></span>
