@@ -34,6 +34,7 @@ const work_data: Record<string, string> = {
 const work = ref<string>(Object.keys(work_data)[0])
 
 const project: Record<string, any>[] = [
+    { name: 'PokeDex', image: getAssets('pokedex.avif'), desc: 'Pokedex is a web app to find and catch pokemons. This app supported by PokeAPI as data provider that use nested API method. So that, it needs more logic and strategy to consume the API', tech: ['Vue.js', 'Pinia', 'TailwindCSS', 'PWA', 'TypeScript'], secret: false, done: true, git: 'https://github.com/fajarmaulana-dev/pokemon', url: 'https://fajars-pokedex.netlify.app', email: '', pass: '' },
     { name: 'LPOM APP', image: getAssets('lpom.avif'), desc: "LPOM APP is a web app that will later be managed by LPOM UNNES. This app will later load several child's app including a digital library, exercise collections, online course, CBT, form manager, user forum, news media, and scientific article sharing. At present, I've completed the news media manager, form manager, and some basic features such as the dashboard, auth, profile, and user management pages.", tech: ['Vue.js', 'Pinia', 'TypeScript', 'PWA', 'Highcharts', 'Quill.js', 'Stylus', 'Node.js', 'Express.js', 'MongoDB', 'Cloudinary', 'Sharp', 'OAuth', 'FaceAPI', 'TensorFlow'], secret: true, done: false, git: '', url: '', email: '', pass: '' },
     { name: 'UniFACT', image: getAssets('unifact.avif'), desc: 'UniFACT is the result of my bachelor thesis completion. This web can classify the Indonesian-language news narratives as valid, misleading content / false context / manipulated content, or fabricated content / imposter content with support of Bidirectional Temporal Convolutional Network Model. Data for model training is obtained by scraping method on turnbackhoax.id and news.detik.com sites.', tech: ['Beautiful Soup', 'Grequest', 'TensorFlow', 'Keras-TCN', 'FastAPI', 'Docker', 'Vue.js', 'Vuex', 'PWA', 'TailwindCSS'], secret: false, done: true, git: 'https://github.com/fajarmaulana-dev/unifact', url: 'https://unifact.netlify.app', email: '', pass: '' },
     { name: 'FIM UNNES', image: getAssets('fim.avif'), desc: 'This app is a medium used to make it easier to organize the FIM UNNES final round. Consists of three main pages, namely the authentication page, quiz page, and questions and points editing page for each question. This app has several features that accommodate the rules that have been set out in the guide book, such as playing back the time for each question, automatically giving points to participants according to the question points, automatically giving bonus points according to the guide, an undo/redo feature, display and edit the formula content with rich text editor, etc.', tech: ['Vue.js', 'TailwindCSS', 'PWA', 'TypeScript', 'Quill.js', 'Node.js', 'Express.js', 'MongoDB'], secret: false, done: true, git: 'https://github.com/fajarmaulana-dev/finalfim', url: 'https://fimunnes.netlify.app', email: 'fajarmaulana.dev@gmail.com', pass: 'Fajars2023!' },
@@ -132,7 +133,8 @@ const social: Record<string, string> = { 'Github': 'https://github.com/fajarmaul
         <a class="h-10" href="#" aria-label="home" data-aos="fade-right" data-aos-duration="2000">
             <img src="@/assets/fdev.avif" width="29" height="40" alt="logo" class="h-full">
         </a>
-        <div class="hidden sm:flex justify-end items-center gap-5 lg:gap-6" data-aos="fade-left" data-aos-duration="2000">
+        <div class="hidden sm:flex justify-end items-center gap-5 lg:gap-6" data-aos="fade-left"
+            data-aos-duration="2000">
             <Menus />
         </div>
         <button class="dmon font-medium block sm:hidden tracking-wider text-cyan-300 z-[3]" @click="open = !open"
@@ -175,7 +177,8 @@ const social: Record<string, string> = { 'Github': 'https://github.com/fajarmaul
                 </h1>
                 <h1>Let's build your dream <span class="whitespace-nowrap">web !</span></h1>
                 <h2 class="text-sm sd:text-base md:text-lg mt-2 md:w-[80%] lg:w-[70%]">
-                    I am a web developer with high passion to build a high-performance web app. I can't do your live code in
+                    I am a web developer with high passion to build a high-performance web app. I can't do your live
+                    code in
                     just a few minutes, but I can make the app you want in several sprints.
                 </h2>
             </div>
@@ -183,7 +186,8 @@ const social: Record<string, string> = { 'Github': 'https://github.com/fajarmaul
                 class="flex flex-col-reverse xs:flex-row gap-x-3 gap-y-2.5 w-full xs:w-fit dmon text-base xs:text-lg md:text-xl [&>*]:border-2 [&>*]:border-cyan-300 [&>*]:px-4 md:[&>*]:px-5 [&>*]:py-2.5 md:[&>*]:py-3 [&>*]:rounded-xl [&>*]:[transition:.4s] [&>*]:grid [&>*]:place-items-center mt-6">
                 <a class="bg-cyan-300 text-slate-900 font-bold shadow-[0_0_1.5rem_2px_#22d3ee] hover:shadow-[0_0_2rem_2px_#22d3ee] active:shadow-[0_0_1.5rem_2px_#22d3ee]"
                     :href="getAssets('resume.pdf')" target="_blank">Get Resume!</a>
-                <a href="#contact" class="text-cyan-300 font-medium hover:bg-cyan-950 active:bg-transparent">Say Hello</a>
+                <a href="#contact" class="text-cyan-300 font-medium hover:bg-cyan-950 active:bg-transparent">Say
+                    Hello</a>
             </div>
         </div>
         <div id="about" class="pt-[calc(3.5rem+2.5vw)] pb-[calc(5rem+4vw)]">
@@ -195,10 +199,12 @@ const social: Record<string, string> = { 'Github': 'https://github.com/fajarmaul
                 class="flex flex-col-reverse xl:flex-row gap-x-16 gap-y-8 items-center">
                 <div class="viet text-sm sd:text-base md:text-lg font-light text-slate-300 [&_span]:text-cyan-300">
                     <p>
-                        Hi, my name is <span>Fajar</span>. I just a <span>Mathematician</span> who also has an interest in
+                        Hi, my name is <span>Fajar</span>. I just a <span>Mathematician</span> who also has an interest
+                        in
                         <span>Software Development and Deep Learning</span>. I started this interest <span>since</span>
                         the beginning of <span>2021</span> through the <span>Bangkit and Certified Internship
-                            Programs</span>. I am passionate about learning new technologies and building beautiful views.
+                            Programs</span>. I am passionate about learning new technologies and building beautiful
+                        views.
                     </p>
                     <p class="my-3">Here are few technologies I've been working recently</p>
                     <div
@@ -275,7 +281,8 @@ const social: Record<string, string> = { 'Github': 'https://github.com/fajarmaul
                     <div
                         class="flex justify-end md:justify-start z-[1] gap-5 mt-4 mr-2 md:ml-2 md:mr-0 text-slate-300 [&>*]:relative hover:[&>div>:not(b)]:text-cyan-300 [&>div>:not(b)]:cursor-pointer [&>div>*]:[transition:.4s] [&_b]:opacity-0 [&_b]:absolute [&_b]:whitespace-nowrap [&_b]:top-[calc(100%+.25rem)] [&_b]:right-0 md:[&_b]:left-0 [&_b]:rounded [&_b]:tracking-widest [&_b]:py-0.5 [&_b]:px-2 [&_b]:text-xs [&_b]:viet [&_b]:min-w-fit [&_b]:bg-cyan-300 [&_b]:font-black [&_b]:text-slate-900">
                         <div>
-                            <a v-if="!x.secret" :href="x.git" target="_blank" :aria-label="`${x.name} git url`"
+                            <a v-if="!x.secret && x.git !== ''" :href="x.git" target="_blank"
+                                :aria-label="`${x.name} git url`"
                                 class="peer fab fa-github text-[1.25rem] leading-[1.7rem] md:text-[1.4rem] md:leading-7"></a>
                             <b class="peer-hover:opacity-100">Open Repo</b>
                         </div>
@@ -285,7 +292,7 @@ const social: Record<string, string> = { 'Github': 'https://github.com/fajarmaul
                             <b class="peer-hover:opacity-100">Open Full Image</b>
                         </div>
                         <div>
-                            <a v-if="x.done" :href="x.url" target="_blank" :aria-label="`${x.name} url`"
+                            <a v-if="x.done && x.url !== ''" :href="x.url" target="_blank" :aria-label="`${x.name} url`"
                                 class="peer fas fa-up-right-from-square text-lg md:text-xl"></a>
                             <b class="peer-hover:opacity-100">Open App</b>
                         </div>
@@ -322,7 +329,8 @@ const social: Record<string, string> = { 'Github': 'https://github.com/fajarmaul
                 <h2 class="dmon text-cyan-300 sd:text-lg tracking-wide">04. What's Next?</h2>
                 <h2 class="viet text-gray-200 text-3xl sd:text-4xl font-bold">Get In Touch</h2>
                 <p class="text-center viet md:text-lg text-slate-300 font-light my-8">
-                    I'm currently looking for any new opportunities, my inbox is always open. Whatever you have a question
+                    I'm currently looking for any new opportunities, my inbox is always open. Whatever you have a
+                    question
                     or just to say hi, i'll try my best to get back to you</p>
                 <div v-if="hasSend" class="flex flex-col items-center gap-4">
                     <p class="text-center viet md:text-lg font-bold"
@@ -344,7 +352,8 @@ const social: Record<string, string> = { 'Github': 'https://github.com/fajarmaul
                         </Field>
                         <Field v-slot="{ field, errorMessage }" name="user_email">
                             <div>
-                                <TextLine v-model="user_email" id="user_email" placeholder="Email" width="w-44" :="field" />
+                                <TextLine v-model="user_email" id="user_email" placeholder="Email" width="w-44"
+                                    :="field" />
                                 <p class="text-left text-rose-300 text-xs mt-1 viet">{{ errorMessage }}</p>
                             </div>
                         </Field>
@@ -366,7 +375,8 @@ const social: Record<string, string> = { 'Github': 'https://github.com/fajarmaul
             </div>
         </div>
         <div :class="loading ? 'bottom-0 opacity-100' : '-bottom-[calc(100%+4rem)] opacity-30'"
-            style="transition: bottom .65s, opacity .65s;" class="fixed left-0 h-screen w-full bg-[rgb(10,25,47)] z-[4]">
+            style="transition: bottom .65s, opacity .65s;"
+            class="fixed left-0 h-screen w-full bg-[rgb(10,25,47)] z-[4]">
             <div v-if="animation" class="h-full w-full overflow-hidden relative flex items-center justify-center scene">
                 <i v-for="i in Math.floor(screenWidth / 18)" class="star absolute -top-4 w-0.5 bg-cyan-100 rounded-full"
                     :style="`height: ${25 + (Math.random() * 100)}px; left: ${Math.floor(Math.random() * screenWidth)}px; animation-duration: ${(Math.random() * 100) + 1}s`"></i>
