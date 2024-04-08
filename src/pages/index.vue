@@ -23,11 +23,12 @@ onMounted(() => {
 })
 const open = ref<boolean>(false)
 const tech = [
-    ['TailwindCSS', 'JavaScript (ES6+)', 'TypeScript', 'Python'],
-    ['MongoDB', 'Express.js', 'Vue.js', 'Node.js'],
-    ['TensorFlow', 'FastAPI', 'Docker']
+    ['TailwindCSS', 'CSS Module', 'SCSS', 'Styled Components', 'JavaScript (ES6+)', 'TypeScript', 'Python', 'Go'],
+    ['MongoDB', 'Express.js', 'Vue.js', 'Node.js', 'PostgreSQL', 'GIN', 'React.js', 'Next.js'],
+    ['TensorFlow', 'FastAPI', 'Cloudinary', 'Beautiful Soup']
 ]
 const work_data: Record<string, string> = {
+    'Sea Labs Indonesia - Present': 'On this occasion I learned a lot about building backend services with Golang in a clean architecture. The framework used for the backend is GIN. Meanwhile, the database used is PostgreSQL. I also learned Frontend Development using React, Redux, and Next.js with a reusable atomic design. Apart from that, I also learned a lot about improving SEO and dividing pages as CSR, SSR, SSG, ISR according to needs, as well as testing applications both on the frontend and backend. On the backend side, testing uses the Testify and Mockery libraries. Meanwhile, on the frontend side, use Jest or Vitest.',
     'FIM UNNES - Aug/2022': 'On this occasion, I was required to learn backend development because the project I was working on here was a Fullstack web project. I chose to use Node.js and Express.js as the framework for the backend side, and MongoDB as the database. On the frontend side, I also learned to use Quill.js as a Richtext Editor and PWA to build a website that can be installed on mobile and desktop devices and supports page loading without internet access.',
     'GITS.ID - Feb/2022': 'This is the first time I started my career as a web developer. I interned at PT. GITS Indonesia through the Certified Internship program from the Ministry of Education and Culture. Here I learned a lot about using Vue.js, TailwindCSS, Vuetify, and Highcharts to build a dashboard page display that displays several data presentations in the form of line charts, pie charts, and tables within a certain month range. I also learned how to integrate the Frontend with the Backend via API using Axios. Apart from that, I also learned the development methods at this company which used the SCRUM method and several tools such as Trello as a framework and the use of Husky in commit management.'
 }
