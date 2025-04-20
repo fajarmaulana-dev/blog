@@ -18,25 +18,34 @@ onMounted(() => {
     AOS.init()
     typer('#typer')
         .line('Fajar Maulana').pause(4000).back('all')
-        .continue('MEVN Developer').pause(4000).back('all')
+        .continue('Web Developer').pause(4000).back('all')
         .repeat(Infinity)
 })
 const open = ref<boolean>(false)
 const tech = [
     ['TailwindCSS', 'CSS Module', 'SCSS', 'Styled Components', 'JavaScript (ES6+)', 'TypeScript', 'Python', 'Go'],
     ['MongoDB', 'Express.js', 'Vue.js', 'Node.js', 'PostgreSQL', 'GIN', 'React.js', 'Next.js'],
-    ['TensorFlow', 'FastAPI', 'Cloudinary', 'Beautiful Soup']
+    ['Nuxt.js', 'PWA', 'TensorFlow', 'FastAPI', 'Cloudinary', 'Beautiful Soup']
 ]
 const work_data: Record<string, string> = {
-    'Sea Labs Indonesia - Present': 'On this occasion I learned a lot about building backend services with Golang in a clean architecture. The framework used for the backend is GIN. Meanwhile, the database used is PostgreSQL. I also learned Frontend Development using React, Redux, and Next.js with a reusable atomic design. Apart from that, I also learned a lot about improving SEO and dividing pages as CSR, SSR, SSG, ISR according to needs, as well as testing applications both on the frontend and backend. On the backend side, testing uses the Testify and Mockery libraries. Meanwhile, on the frontend side, use Jest or Vitest.',
+    'Komerce - Present': 'In this company, I was responsible for handling Komtim and Komplace products. Komtim is a talent service provider of Customer Service, Advertiser, Marketplace Admin, and Livestreamer to help MSME businesses in need. While Komplace is a product management service provider in many stores, order processing in all marketplaces, stock synchronization, and customer chat reply in one application. In addition, I also have the responsibility to revamp and improve landing page performance for several products, as well as doing bug fixing.',
+    'Sea Labs Indonesia - Jan/2024': 'On this occasion I learned a lot about building backend services with Golang in a clean architecture. The framework used for the backend is GIN. Meanwhile, the database used is PostgreSQL. I also learned Frontend Development using React, Redux, and Next.js with a reusable atomic design. Apart from that, I also learned a lot about improving SEO and dividing pages as CSR, SSR, SSG, ISR according to needs, as well as testing applications both on the frontend and backend. On the backend side, testing uses the Testify and Mockery libraries. Meanwhile, on the frontend side, use Jest or Vitest.',
     'FIM UNNES - Aug/2022': 'On this occasion, I was required to learn backend development because the project I was working on here was a Fullstack web project. I chose to use Node.js and Express.js as the framework for the backend side, and MongoDB as the database. On the frontend side, I also learned to use Quill.js as a Richtext Editor and PWA to build a website that can be installed on mobile and desktop devices and supports page loading without internet access.',
     'GITS.ID - Feb/2022': 'This is the first time I started my career as a web developer. I interned at PT. GITS Indonesia through the Certified Internship program from the Ministry of Education and Culture. Here I learned a lot about using Vue.js, TailwindCSS, Vuetify, and Highcharts to build a dashboard page display that displays several data presentations in the form of line charts, pie charts, and tables within a certain month range. I also learned how to integrate the Frontend with the Backend via API using Axios. Apart from that, I also learned the development methods at this company which used the SCRUM method and several tools such as Trello as a framework and the use of Husky in commit management.'
 }
 const work = ref<string>(Object.keys(work_data)[0])
 
 const project: Record<string, any>[] = [
-    { name: 'PokeDex', image: getAssets('pokedex.avif'), desc: 'Pokedex is a web app to find and catch pokemons. This app supported by PokeAPI as data provider that use nested API method. So that, it needs more logic and strategy to consume the API', tech: ['Vue.js', 'Pinia', 'TailwindCSS', 'PWA', 'TypeScript'], secret: false, done: true, git: 'https://github.com/fajarmaulana-dev/pokemon', url: 'https://fajars-pokedex.netlify.app', email: '', pass: '' },
-    { name: 'LPOM APP', image: getAssets('lpom.avif'), desc: "LPOM APP is a web app that will later be managed by LPOM UNNES. This app will later load several child's app including a digital library, exercise collections, online course, CBT, form manager, user forum, news media, and scientific article sharing. At present, I've completed the news media manager, form manager, and some basic features such as the dashboard, auth, profile, and user management pages.", tech: ['Vue.js', 'Pinia', 'TypeScript', 'PWA', 'Highcharts', 'Quill.js', 'Stylus', 'Node.js', 'Express.js', 'MongoDB', 'Cloudinary', 'Sharp', 'OAuth', 'FaceAPI', 'TensorFlow'], secret: true, done: false, git: '', url: '', email: '', pass: '' },
+    { name: 'RajaOngkir API', image: getAssets('rajaongkir.avif'), desc: 'RajaOngkir is a service that provides shipping cost information, as well as Open API for shipping goods and COD for various couriers in Indonesia such as POS Indonesia, JNE, TIKI, J&T, IDexpress, SAP, Ninja, and SiCepat. This Landing Page is built with Next.js App Router without any additional libraries when initiated to support good Core Web Vitals.', tech: ['Next.js', 'TypeScript', 'TailwindCSS'], secret: true, done: true, git: '', url: 'https://rajaongkir.com/api', email: '', pass: '' },
+    { name: 'Komtim.id', image: getAssets('komtim.avif'), desc: 'Komtim is a talent service provider of Customer Service, Advertiser, Marketplace Admin, and Livestreamer to help MSME businesses in need. The core web vitals of this landing page has been improved as part of the task.', tech: ['Nuxt.js', 'JavaScript'], secret: true, done: true, git: '', url: 'https://komtim.id', email: '', pass: '' },
+    { name: 'Komtim - Customer Service', image: getAssets('komtim-customer-service.avif'), desc: 'Komtim - Customer Service is a landing page used to promote reliable customer service talents who have been fostered by Komtim. The core web vitals of this landing page has been improved as part of the task.', tech: ['Nuxt.js', 'JavaScript'], secret: true, done: true, git: '', url: 'https://komtim.id/customer-service', email: '', pass: '' },
+    { name: 'Komtim - Livestreamer', image: getAssets('komtim-livestreamer.avif'), desc: 'Komtim - Livestreamer is a landing page used to promote reliable live streamer talents who have been fostered by Komtim. The core web vitals of this landing page has been improved as part of the task.', tech: ['Nuxt.js', 'JavaScript'], secret: true, done: true, git: '', url: 'https://komtim.id/livestreamer', email: '', pass: '' },
+    { name: 'Komtim - Advertiser', image: getAssets('komtim-advertiser.avif'), desc: 'Komtim - Advertiser is a landing page used to promote reliable advertiser talents who have been fostered by Komtim. The core web vitals of this landing page has been improved as part of the task.', tech: ['Nuxt.js', 'JavaScript'], secret: true, done: true, git: '', url: 'https://komtim.id/advertiser-package', email: '', pass: '' },
+    { name: 'Komtim - Admin Marketplace', image: getAssets('komtim-admin-marketplace.avif'), desc: 'Komtim - Admin Marketplace is a landing page used to promote reliable admin marketplace talents who have been fostered by Komtim. The core web vitals of this landing page has been improved as part of the task.', tech: ['Nuxt.js', 'JavaScript'], secret: true, done: true, git: '', url: 'https://komtim.id/admin-marketplace', email: '', pass: '' },
+    { name: 'Komerce.id', image: getAssets('komerce.avif'), desc: 'Komerce.id is the landing page of Komerce. Komerce is a startup that is ready to help improve sales performance in e-commerce by providing trained talent support, order delivery platforms, and warehouse management.', tech: ['Nuxt.js', 'JavaScript'], secret: true, done: true, git: '', url: 'https://komerce.id', email: '', pass: '' },
+    { name: 'Komplace.id', image: getAssets('komplace.avif'), desc: 'Komplace is a product management service provider in many stores, order processing in all marketplaces, stock synchronization, and customer chat reply in one application. The landing page is built in PWA to provide some features, like caching, notification, etc.', tech: ['Vue.js', 'JavaScript', 'TailwindCSS', 'PWA'], secret: true, done: true, git: '', url: 'https://komplace.id', email: '', pass: '' },
+    { name: 'Komclass.id', image: getAssets('komclass.avif'), desc: 'Komclass.id is a service that is help SMEs to go digital with online business training, and offering lots of practical sessions. The class is available online and offline. The landing page is built with Next.js Page Router.', tech: ['Next.js', 'TypeScript', 'TailwindCSS'], secret: true, done: true, git: '', url: 'https://komclass.id', email: '', pass: '' },
+    // { name: 'PokeDex', image: getAssets('pokedex.avif'), desc: 'Pokedex is a web app to find and catch pokemons. This app supported by PokeAPI as data provider that use nested API method. So that, it needs more logic and strategy to consume the API', tech: ['Vue.js', 'Pinia', 'TailwindCSS', 'PWA', 'TypeScript'], secret: false, done: true, git: 'https://github.com/fajarmaulana-dev/pokemon', url: 'https://fajars-pokedex.netlify.app', email: '', pass: '' },
     { name: 'UniFACT', image: getAssets('unifact.avif'), desc: 'UniFACT is the result of my bachelor thesis completion. This web can classify the Indonesian-language news narratives as valid, misleading content / false context / manipulated content, or fabricated content / imposter content with support of Bidirectional Temporal Convolutional Network Model. Data for model training is obtained by scraping method on turnbackhoax.id and news.detik.com sites.', tech: ['Beautiful Soup', 'Grequest', 'TensorFlow', 'Keras-TCN', 'FastAPI', 'Docker', 'Vue.js', 'Vuex', 'PWA', 'TailwindCSS'], secret: false, done: true, git: 'https://github.com/fajarmaulana-dev/unifact', url: 'https://unifact.netlify.app', email: '', pass: '' },
     { name: 'FIM UNNES', image: getAssets('fim.avif'), desc: 'This app is a medium used to make it easier to organize the FIM UNNES final round. Consists of three main pages, namely the authentication page, quiz page, and questions and points editing page for each question. This app has several features that accommodate the rules that have been set out in the guide book, such as playing back the time for each question, automatically giving points to participants according to the question points, automatically giving bonus points according to the guide, an undo/redo feature, display and edit the formula content with rich text editor, etc.', tech: ['Vue.js', 'TailwindCSS', 'PWA', 'TypeScript', 'Quill.js', 'Node.js', 'Express.js', 'MongoDB'], secret: false, done: true, git: 'https://github.com/fajarmaulana-dev/finalfim', url: 'https://fimunnes.netlify.app', email: 'fajarmaulana.dev@gmail.com', pass: 'Fajars2023!' },
     { name: 'GPP System', image: getAssets('gpp.avif'), desc: 'GITS Project Profitability System (GPP System) is an application built to facilitate the profit analysis, project cost analysis, and review the logtime of each employee at PT. GITS Indonesia. This was the first time I pursued the field of frontend development through my participation in Magang Merdeka.', tech: ['Vue.js', 'TailwindCSS', 'Vuetify', 'HighCharts', 'TypeScript'], secret: true, done: true, git: '', url: 'https://msib-gpp.gits.app', email: '', pass: '' },
@@ -57,6 +66,7 @@ const copy = async (i: number, type: string) => {
 const modal = reactive({ container: false, box: false })
 const modalImg = ref('')
 const openModal = (i: number) => {
+    document.body.style.overflow = 'hidden'
     modalImg.value = project[i].image
     modal.container = true;
     setTimeout(() => {
@@ -68,6 +78,7 @@ const closeModal = () => {
     modal.box = false;
     setTimeout(() => {
         modal.container = false
+        document.body.style.overflow = 'auto'
     }, 300)
 }
 
@@ -223,7 +234,7 @@ const social: Record<string, string> = { 'Github': 'https://github.com/fajarmaul
             </div>
         </div>
         <div id="work" class="pt-[calc(3.5rem+2.5vw)] pb-[calc(5rem+4vw)] lg:grid place-items-center">
-            <div class="lg:w-[70%]">
+            <div class="w-full lg:w-[70%]">
                 <h2 class="viet text-gray-200 text-3xl sd:text-4xl font-bold mb-6"><span
                         class="dmon text-cyan-300 text-2xl sd:text-3xl">02.</span>
                     Where I've Worked
@@ -309,11 +320,10 @@ const social: Record<string, string> = { 'Github': 'https://github.com/fajarmaul
             <section @click="closeModal()"
                 class="fixed z-[2] h-screen w-screen bg-cyan-300/10 top-0 left-0 p-[calc(1.9rem+1.9vw)]"
                 :class="modal.container ? 'block' : 'hidden'" style="transition: .1s; transition-delay: .1s;">
-                <div :class="modal.box ? 'scale-100' : 'scale-0'" style="transition: .3s;"
-                    class="w-full h-full transform-gpu bg-slate-900 rounded-lg flex items-center justify-center shadow-[0_0_20px_1px] shadow-cyan-400/50 relative overflow-hidden">
+                <div :class="modal.box ? 'scale-100' : 'scale-0'" style="transition: .3s; max-width: 1440px;"
+                    class="w-full h-full m-auto transform-gpu bg-slate-900 rounded-lg flex items-center justify-center shadow-[0_0_20px_1px] shadow-cyan-400/50 relative overflow-hidden">
                     <div class="w-full h-full grid place-items-center overflow-y-auto">
-                        <img fetchpriority="high" rel="preload" :src="modalImg" class="select-none w-[100%]"
-                            alt="zoomed image" />
+                        <img loading="eager" :src="modalImg" class="select-none w-[100%]" alt="zoomed image" />
                     </div>
                     <div style="transition: .4s;" @click="closeModal()"
                         class="fixed select-none -top-8 -right-8 w-16 h-16 bg-cyan-300 opacity-90 hover:opacity-100 active:opacity-90 text-slate-900 grid place-items-center rounded-full font-black cursor-pointer text-sm">

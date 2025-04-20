@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <main class="max-w-screen overflow-hidden">
+  <main class="overflow-hidden m-auto" style="max-width: 1440px">
     <router-view />
   </main>
 </template>
@@ -13,6 +13,10 @@
   margin: 0;
   padding: 0;
   -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background-color: rgb(10, 25, 47);
 }
 
 :root {
