@@ -136,7 +136,7 @@ const reset = () => {
     toast.success = false;
 }
 
-const social: Record<string, string> = { 'Github': 'https://github.com/fajarmaulana-dev', 'Whatsapp': 'https://wa.me/6285842039127', 'Linkedin': 'https://www.linkedin.com/in/fajar-maulana-16b98b152', 'Facebook': 'https://web.facebook.com/profile.php?id=100090702398845' }
+const social: Record<string, string> = { 'Github': 'https://github.com/fajarmaulana-dev', 'Whatsapp': 'https://wa.me/6285848204377', 'Linkedin': 'https://www.linkedin.com/in/fajar-maulana-16b98b152', 'Facebook': 'https://web.facebook.com/profile.php?id=100090702398845' }
 </script>
 
 <template>
